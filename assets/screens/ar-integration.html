@@ -1,0 +1,352 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Integrations · ADPF</title><link rel="stylesheet" href="../styles.css?v=customer-comments-20261028-r2"><style>
+[data-theme]{--color-accent-2:var(--color-accent);--color-accent-100:color-mix(in srgb,var(--color-accent) 8%,#fff);--color-accent-200:color-mix(in srgb,var(--color-accent) 18%,#fff);--color-accent-300:color-mix(in srgb,var(--color-accent) 32%,#fff);--color-accent-400:color-mix(in srgb,var(--color-accent) 55%,#fff);--color-accent-500:var(--color-accent);--color-accent-600:color-mix(in srgb,var(--color-accent) 88%,#000);--color-accent-700:color-mix(in srgb,var(--color-accent) 72%,#000);--color-accent-800:color-mix(in srgb,var(--color-accent) 55%,#000);--color-accent-900:color-mix(in srgb,var(--color-accent) 38%,#000);--color-accent-2-100:var(--color-accent-100);--color-accent-2-800:var(--color-accent-800)}
+[data-theme="green"]{--color-accent:#2e9e6e}
+[data-theme="steel"]{--color-accent:#5980a6}
+[data-theme="teal"]{--color-accent:#2a8a9e}
+[data-theme="navy"]{--color-accent:#2f6288}
+[data-theme="violet"]{--color-accent:#7a4fb3}
+[data-theme="plum"]{--color-accent:#a2497e}
+[data-theme="amber"]{--color-accent:#a06d12}
+[data-theme="clay"]{--color-accent:#a84f2e}
+[data-mode="dark"]{--color-bg:#17191b;--color-surface:#212427;--color-text:#e7e8e9;--color-divider:#43484d;--color-neutral-100:#26292c;--color-neutral-200:#2e3236;--color-neutral-300:#3b4045;--color-neutral-400:#5c636a;--color-neutral-500:#8a9096;--color-neutral-600:#a6adb4;--color-neutral-700:#c3c9cf;--shadow-sm:none;--shadow-md:none;--shadow-lg:0 8px 24px rgba(0,0,0,.55)}
+[data-mode="dark"] .prev{background:var(--color-surface)}
+[data-side="min"] .shell{grid-template-columns:56px minmax(0,1fr)}
+[data-side="min"] .gside .k,[data-side="min"] .gside .gitem span,[data-side="min"] .gside .cnt{display:none}
+[data-side="min"] .gitem{justify-content:center;padding:10px 0}
+[data-header="static"] .nav{position:static}
+[data-header="static"] .gside{position:static;height:auto}
+[data-width="boxed"] .gmain{max-width:1200px;width:100%;margin-inline:auto;border-inline-end:1px solid var(--color-divider)}
+[data-font="plex"]{--font-body:"Roboto",sans-serif;--font-heading:"Roboto",sans-serif}
+[data-font="system"]{--font-body:system-ui,sans-serif;--font-heading:system-ui,sans-serif}
+[data-font="georgia"]{--font-body:Georgia,serif;--font-heading:Georgia,serif}
+[data-fs="s"] .gmain{zoom:.92}[data-fs="l"] .gmain{zoom:1.08}
+[data-motion="off"] *{transition:none !important;animation:none !important}
+[data-contrast="on"]{--color-divider:#686d73;--color-neutral-500:#454a50;--color-neutral-600:#2f3337}
+[data-links="on"] a,[data-links="on"] .btn-ghost{text-decoration:underline}
+[data-targets="on"] .btn{min-height:44px}[data-targets="on"] .input{min-height:42px}[data-targets="on"] .table td{padding-block:12px}
+[data-density="comfortable"] .table td,[data-density="comfortable"] .table th{padding:13px 12px}
+[data-density="comfortable"] .page{padding:30px 36px;gap:22px}
+.palcard{border:1px solid var(--color-divider);background:var(--color-surface);padding:10px 12px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;font:inherit;font-size:14px;cursor:pointer;text-align:start;color:inherit}
+.palcard i{width:24px;height:15px;display:block}
+.palcard b{font:600 13px var(--font-heading)}
+.palcard:hover{background:var(--color-accent-100)}
+.palcard[aria-current="page"]{outline:2px solid var(--color-accent);outline-offset:2px}
+@keyframes dasspin{to{transform:rotate(360deg)}}
+@keyframes dasbar{0%{inset-inline-start:-30%}100%{inset-inline-start:100%}}
+@keyframes dasdots{0%,80%,100%{opacity:.25}40%{opacity:1}}
+body{margin:0;min-height:100vh}
+[dir="rtl"]{font-family:"Noto Kufi Arabic",sans-serif}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] h4,[dir="rtl"] h5,[dir="rtl"] .nav-brand,[dir="rtl"] .card-title{font-family:var(--font-heading);letter-spacing:0}
+[dir="rtl"] .k,[dir="rtl"] h6,[dir="rtl"] .table th{letter-spacing:0}
+a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-900)}
+.req{color:var(--color-accent-700);font-weight:600;margin-inline-start:2px}
+.sys,.opt{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-600);margin-inline-start:6px}
+.opt{color:var(--color-neutral-500)}
+.k{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;direction:ltr;unicode-bidi:isolate;display:inline-block}
+.num{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:2px 8px;border:1px solid currentColor;font-weight:600;white-space:nowrap}
+.p-open{color:#2f6f3f}.p-sens{color:#8a5d10}.p-conf{color:#9a4420}.p-secr{color:#7d1f2e}
+.side a,.side button{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:start;background:none;border:0;font:inherit;cursor:pointer;padding:9px 14px;font-size:14px;color:inherit;text-decoration:none;border-inline-start:3px solid transparent}
+.side a:hover,.side button:hover{background:var(--color-accent-100)}
+.side [aria-current="page"]{border-inline-start-color:var(--color-accent);background:var(--color-accent-100);font-weight:600}
+.step{display:flex;align-items:center;gap:8px;font-size:14px}
+.step i{width:10px;height:10px;display:block;border:1.5px solid var(--color-neutral-500);flex:none}
+.step.done i{background:var(--color-accent);border-color:var(--color-accent)}
+.step.cur i{border-color:var(--color-accent);background:var(--color-accent-200)}
+.table td,.table th{vertical-align:middle;text-align:start}
+.table td.num,.table th.num{text-align:end}
+td.mono{display:table-cell}
+[dir="rtl"] .table td.mono{text-align:right}
+[dir="ltr"] .table td.mono{text-align:left}
+.bp{position:relative;border:1px solid var(--color-divider)}
+.bp>.corner{position:absolute;width:11px;height:11px;color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+.bp>.corner::before,.bp>.corner::after{content:"";position:absolute;background:currentColor}
+.bp>.corner::before{left:5px;top:0;width:1px;height:100%}.bp>.corner::after{top:5px;left:0;width:100%;height:1px}
+.bp>.corner.tl{top:-6px;left:-6px}.bp>.corner.tr{top:-6px;right:-6px}.bp>.corner.bl{bottom:-6px;left:-6px}.bp>.corner.br{bottom:-6px;right:-6px}
+.corner{pointer-events:none}
+.intgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,400px);gap:24px;align-items:start}
+.clsgrid{display:grid;grid-template-columns:260px minmax(0,1fr);flex:1}
+.tabs{flex-wrap:wrap}.tabs button{white-space:nowrap}
+.bp[style*="repeat(5,1fr)"],.bp[style*="repeat(6,1fr)"]{grid-template-columns:repeat(auto-fit,minmax(120px,1fr)) !important}
+@container (max-width:900px){.clsgrid{grid-template-columns:minmax(0,1fr)}.clsgrid>div:first-child{border-inline-end:0;border-bottom:1px solid var(--color-divider)}.clsgrid .side{max-height:240px}}
+.intaside{position:sticky;top:72px}
+.page{container-type:inline-size}
+@container (max-width:1060px){.intgrid{grid-template-columns:minmax(0,1fr)}.intaside{position:static}}
+.gmain{container-type:inline-size}
+.inttable th,.inttable td{white-space:nowrap}.inttable td:first-child{white-space:normal}
+.nav{gap:var(--space-2) var(--space-3)}
+.nav .k{display:none}
+@media (min-width:1180px){.nav{gap:var(--space-3) var(--space-4)}.nav .k{display:inline}}
+.node{border-radius:0}.chip,.pill,.toast,.input,.seg,.btn{border-radius:0}
+:root{--c-projects:#c2612f;--c-classify:#2a8a9e;--c-delegation:#a5671c;--c-home:#2e9e6e;--c-capture:#2f7fbf;--c-approvals:#d08a1d;--c-search:#5f6fb8;--c-records:#1f8f8a;--c-disposition:#b5563a;--c-holds:#8c2f45;--c-integration:#7a4fb3;--c-admin:#5a6675;--c-myfiles:#a2497e;--c-reports:#346e8f}
+.shell{display:grid;grid-template-columns:232px minmax(0,1fr);flex:1;min-height:0}
+.gside{border-inline-end:1px solid var(--color-divider);padding:12px 0;display:flex;flex-direction:column;position:sticky;top:57px;height:calc(100vh - 57px);overflow:auto;background:var(--color-surface)}
+.gmain{min-width:0;display:flex;flex-direction:column}
+.gitem{display:flex;align-items:center;gap:10px;width:100%;text-align:start;background:none;border:0;border-inline-start:3px solid transparent;font:inherit;font-size:14px;color:inherit;cursor:pointer;padding:8px 14px 8px 11px}
+.gitem i{width:10px;height:10px;flex:none;background:var(--sec)}
+.gitem span{flex:1}.gitem .cnt{font-size:14px;padding:1px 7px;border:1px solid var(--color-divider);color:var(--color-neutral-700);font-weight:600;font-variant-numeric:tabular-nums}
+.gitem .cnt.hot{background:var(--c-approvals);border-color:var(--c-approvals);color:#fff}.gitem .cnt.err{background:var(--c-disposition);border-color:var(--c-disposition);color:#fff}
+.gitem:hover{background:color-mix(in srgb,var(--sec) 10%,transparent)}
+.gitem[aria-current="page"]{background:var(--sec);border-inline-start-color:var(--sec);color:#fff;font-weight:600}
+.gitem[aria-current="page"] i{background:#fff}
+.gitem[aria-current="page"] .cnt{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.18)}
+.gitem[aria-current="page"] .cnt.hot,.gitem[aria-current="page"] .cnt.err{background:#fff;color:var(--sec);border-color:#fff}
+.c-home{--sec:var(--c-home)}.c-projects{--sec:var(--c-projects)}.c-classify{--sec:var(--c-classify)}.c-delegation{--sec:var(--c-delegation)}.sec-projects{--sec:var(--c-projects)}.sec-classify{--sec:var(--c-classify)}.sec-delegation{--sec:var(--c-delegation)}
+.lvl{display:inline-grid;place-items:center;width:16px;height:16px;font:600 9px var(--font-heading);color:#fff;flex:none}.lvl.l1{background:#2a8a9e}.lvl.l2{background:#5fa9b8}.lvl.l3{background:#98c7d0;color:#123}
+.tag-status-ok,.tag-status-warn,.tag-status-err{display:inline-flex;align-items:center;padding:2px 8px;font-size:14px;font-weight:600;border:1px solid}.c-capture{--sec:var(--c-capture)}.c-approvals{--sec:var(--c-approvals)}.c-search{--sec:var(--c-search)}.c-records{--sec:var(--c-records)}.c-disposition{--sec:var(--c-disposition)}.c-holds{--sec:var(--c-holds)}.c-integration{--sec:var(--c-integration)}.c-admin{--sec:var(--c-admin)}
+.sec-home{--sec:var(--c-home)}.sec-capture{--sec:var(--c-capture)}.sec-approvals{--sec:var(--c-approvals)}.sec-search{--sec:var(--c-search)}.sec-records{--sec:var(--c-records)}.sec-disposition{--sec:var(--c-disposition)}.sec-holds{--sec:var(--c-holds)}.sec-integration{--sec:var(--c-integration)}.sec-admin{--sec:var(--c-admin)}.c-myfiles{--sec:var(--c-myfiles)}.sec-myfiles{--sec:var(--c-myfiles)}.c-reports{--sec:var(--c-reports)}.sec-reports{--sec:var(--c-reports)}
+.hbar{display:grid;grid-template-columns:110px minmax(0,1fr) 44px;align-items:center;gap:10px;font-size:14px}
+.hbar .trk{height:12px;background:var(--color-neutral-200);position:relative}
+.hbar .trk i{position:absolute;inset-block:0;inset-inline-start:0;background:var(--sec,var(--color-accent))}
+.hbar .trk b{position:absolute;inset-block:-3px;width:2px;background:var(--color-text)}
+[dir="rtl"] svg{direction:ltr}
+[class*="sec-"] .hd>div:first-child>.k,[class*="sec-"]>div:first-child>div:first-child>.k{color:var(--sec)}
+[class*="sec-"] .hd h3,[class*="sec-"] h3{border-inline-start:4px solid var(--sec);padding-inline-start:10px}
+[class*="sec-"] .tabs button[aria-current="page"]{border-bottom-color:var(--sec)}
+[class*="sec-"] .stat .n{color:color-mix(in srgb,var(--sec) 70%,var(--color-text))}
+.stat .n.ok,.ok{color:#2f6f3f}.stat .n.warn,.warn{color:#a8720f}.stat .n.err,.err{color:#9a4420}
+.p-open{background:#e3f3e7;border-color:#9fd1ac}.p-sens{background:#fbf0d9;border-color:#e6c680}.p-conf{background:#fbeee8;border-color:#e0b39c}.p-secr{background:#f6e4e8;border-color:#d9a3af}
+.side [aria-current="page"]{border-inline-start-color:var(--sec,var(--color-accent));background:var(--sec,var(--color-accent));color:#fff}
+.side [aria-current="page"] .tag,.side [aria-current="page"] .mono{color:#fff;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5)}
+.side a[aria-current="page"]:hover,.side button[aria-current="page"]:hover{background:var(--sec,var(--color-accent));color:#fff}
+.gitem[aria-current="page"]:hover{background:var(--sec)}
+.tabs button[aria-current="page"]:hover{background:var(--sec,var(--color-accent));color:#fff}
+.tabs button[aria-current="page"]{background:var(--sec,var(--color-accent));color:#fff;border-bottom-color:var(--sec,var(--color-accent))}
+@media (max-width:900px){.shell{grid-template-columns:56px minmax(0,1fr)}.gside .k,.gside .gitem span,.gside .cnt,.gside .gkey{display:none}.gitem{justify-content:center;padding:10px 0}}
+.table.dense td,.table.dense th{padding:6px 8px;font-size:14px}
+.rowbtn{cursor:pointer}.rowbtn:hover td{background:var(--color-accent-100)}
+.stat{padding:14px 16px;border-inline-end:1px solid var(--color-divider)}.stat:last-child{border-inline-end:0}
+.stat .n{font:600 34px/1.1 var(--font-heading)}
+.node{border:1px solid var(--color-divider);background:var(--color-surface);padding:10px 12px;min-width:160px;font-size:14px}
+.node.gate{border-color:var(--color-accent);border-width:2px}
+.node .k{display:block;margin-bottom:2px}
+.arrow{width:32px;height:2px;background:var(--color-divider);align-self:center;flex:none;position:relative}
+.arrow::after{content:"";position:absolute;inset-inline-end:-1px;top:-4px;border:5px solid transparent;border-inline-start-color:var(--color-divider)}
+.ev{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--color-divider);font-size:14px}
+.ev .t{font-family:ui-monospace,Menlo,monospace;font-size:14px;color:var(--color-neutral-600);direction:ltr}
+.tabs{display:flex;border-bottom:2px solid var(--color-divider);gap:2px}
+.tabs button{padding:10px 16px;font:inherit;font-size:14px;color:inherit;background:none;border:0;cursor:pointer;margin-bottom:-2px;border-bottom:2px solid transparent}
+.tabs button[aria-current="page"]{border-bottom-color:var(--color-accent);font-weight:600}
+.ok{color:#2f6f3f;font-weight:600}.warn{color:#8a5d10;font-weight:600}.err{color:#9a4420;font-weight:600}
+.nav{flex-wrap:wrap;gap:var(--space-3) var(--space-4)}
+.nav>*{flex:none}
+.nav .seg{flex:none}.seg-opt{white-space:nowrap}
+.nav button{background:none;border:0;font:inherit;font-size:14px;color:inherit;cursor:pointer;padding:0;white-space:nowrap}
+.nav button:hover,.nav button[aria-current="page"]{color:var(--color-accent)}
+.field.bad .input{border-color:#9a4420}
+.field .hint{font-size:14px;color:var(--color-neutral-600);margin-top:3px}
+.toast{position:fixed;bottom:20px;inset-inline-start:20px;background:var(--color-accent-900);color:#fff;padding:12px 16px;font-size:14px;box-shadow:var(--shadow-lg);z-index:50;max-width:420px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:3px 8px;background:var(--color-accent-100);color:var(--color-accent-900);border:1px solid var(--color-accent-300)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;align-content:start}
+.page{padding:22px 28px;display:flex;flex-direction:column;gap:16px}
+.hd{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.hd .sp{margin-inline-start:auto;display:flex;gap:8px;align-items:center}
+.prev{background:#fff;border:1px solid var(--color-divider);padding:20px;color:var(--color-neutral-500);font-size:14px;display:flex;flex-direction:column;gap:8px}
+.prev b{display:block;height:8px;background:var(--color-neutral-200)}
+.dot-ok,.dot-warn,.dot-err{display:inline-block;width:9px;height:9px;margin-inline-end:6px;vertical-align:middle}
+.dot-ok{background:#2f6f3f}.dot-warn{background:#c8921d}.dot-err{background:#9a4420}
+.acct-i{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid currentColor;font:600 9px var(--font-heading);flex:none}
+.mfgrid{display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px;align-items:start}
+@container (max-width:860px){.mfgrid{grid-template-columns:minmax(0,1fr)}}
+[data-density="compact"] .table td,[data-density="compact"] .table th{padding:5px 7px;font-size:12.5px}
+[data-density="compact"] .page{padding:14px 20px;gap:12px}
+[data-density="compact"] .stat .n{font-size:26px}
+.bfgrid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;align-items:start}
+@container (max-width:1020px){.bfgrid{grid-template-columns:minmax(0,1fr)}.bfgrid aside{position:static}}
+.introjs-tooltip{border-radius:0;border:1px solid var(--color-divider);box-shadow:var(--shadow-lg);font-family:var(--font-body);overflow:visible;min-width:330px;max-width:400px;background:#fff}
+.introjs-tooltiptext{font-size:14px;line-height:1.55;padding:16px 20px 8px}
+.introjs-helperLayer{border-radius:0}
+body:has([data-theme="green"]) .introjs-tooltip{--color-accent:#2e9e6e;--color-accent-100:#eef8f2;--color-accent-600:#2b8f66;--color-accent-700:#1f6f4f}
+.dgchar{position:absolute;bottom:-6px;width:118px;pointer-events:none;filter:drop-shadow(2px 6px 8px rgba(0,0,0,.28))}
+.dgk{display:flex;justify-content:space-between;align-items:baseline;font:600 10px var(--font-heading);letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700)}
+.dgk .dgn{letter-spacing:.02em;color:var(--color-neutral-600);font-variant-numeric:tabular-nums}
+.dgt{font:600 21px/1.15 var(--font-heading);margin:7px 0 8px;color:var(--color-text)}
+.dgq{font-size:13.5px;line-height:1.62;color:var(--color-text)}
+.dgby{margin-top:9px;font-size:14px;color:var(--color-neutral-600)}
+.introjs-tooltipbuttons{border-top:1px solid var(--color-divider);padding:10px 20px}
+@media (max-width:760px){.dgchar{display:none}}
+.introjs-button{border-radius:0;text-shadow:none;font:inherit;font-size:14px;padding:6px 14px;border:1px solid var(--color-divider);background:#fff;color:var(--color-text)}
+.introjs-button:hover,.introjs-button:focus{background:var(--color-accent-100);border-color:var(--color-divider);color:var(--color-text);box-shadow:none}
+.introjs-nextbutton,.introjs-nextbutton:hover,.introjs-nextbutton:focus{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+.introjs-progress{border-radius:0;background:var(--color-neutral-200)}
+.introjs-progressbar{border-radius:0;background:var(--color-accent)}
+[dir="rtl"] .introjs-tooltip{font-family:"Roboto",var(--font-body);text-align:right;direction:rtl}
+</style><link rel="stylesheet" href="../alternative.css?v=customer-comments-20261028-r2"><link rel="stylesheet" href="../operations.css?v=customer-comments-20261028-r2"></head><body>
+
+
+<div data-theme="green" data-density="default" data-mode="light" data-radius="round" data-side="expanded" data-header="fixed" data-width="fluid" data-font="plex" data-fs="m" data-motion="on" data-contrast="off" data-links="off" data-targets="off" dir="rtl" lang="ar" style="min-height:100vh;background:var(--color-bg);color:var(--color-text);display:flex;flex-direction:column">
+
+
+
+<div class="nav" style="position:sticky;top:0;background:var(--color-bg);z-index:10;border-bottom:1px solid var(--color-divider)">
+<div style="display:flex;align-items:center;gap:12px;margin-inline-end:auto;flex:none"><img src="../uploads/adpf-logo.png" alt="Abu Dhabi Pension Fund" style="height:40px;width:auto"><span style="width:1px;height:28px;background:var(--color-divider)"></span><div style="display:flex;flex-direction:column;line-height:1.1;justify-content:center">
+<span class="nav-brand" style="margin:0;font-size:26px;line-height:1">DAS</span>
+<span style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-800);font-weight:600;white-space:nowrap;font-family:var(--font-heading)">نظام أرشفة الوثائق</span>
+</div></div>
+
+<button data-action="startTour" style="font-weight:600">? دليل الاستخدام</button>
+<span class="seg" style="margin-inline-start:8px" data-tour="lang"><label class="seg-opt"><input type="radio" name="lang" value="en" data-action="setLang"><span>English</span></label><label class="seg-opt"><input type="radio" name="lang" value="ar" checked data-action="setLang"><span>العربية</span></label></span>
+<div class="account-navigation">
+<button class="account-search" data-action="nav.search" aria-label="البحث"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+<details class="account-menu"><summary aria-label="قائمة الحساب"><span class="account-avatar">AA</span><span class="account-summary"><strong>عبير أ. · إدارة تقنية المعلومات</strong><small>مساحة عمل صندوق أبوظبي للتقاعد</small></span><span class="material-symbols-rounded account-chevron" aria-hidden="true">expand_more</span></summary>
+<div class="account-popover"><div class="account-identity"><span class="account-avatar">AA</span><div><strong>عبير أ. · إدارة تقنية المعلومات</strong><small>مساحة عمل صندوق أبوظبي للتقاعد</small></div></div>
+<div class="appearance-switch" role="group" aria-label="المظهر"><button type="button" data-appearance-choice="system" aria-pressed="false"><span class="material-symbols-rounded" aria-hidden="true">desktop_windows</span>النظام</button><button type="button" data-appearance-choice="light" aria-pressed="true"><span class="material-symbols-rounded" aria-hidden="true">light_mode</span>فاتح</button><button type="button" data-appearance-choice="dark" aria-pressed="false"><span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>داكن</button></div>
+<div class="account-actions"><a class="account-settings" href="ar-settings.html"><span class="material-symbols-rounded" aria-hidden="true">tune</span>إعداداتي</a><button type="button" data-action="signOut"><span class="material-symbols-rounded" aria-hidden="true">logout</span>تسجيل الخروج</button></div></div></details></div>
+</div>
+
+
+<div class="shell">
+<nav class="gside" aria-label="Main">
+<div class="k" style="padding:6px 14px 4px">أعمالي</div>
+<button class="gitem c-home" data-action="nav.home" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">home</span><span>الرئيسية</span></button>
+<button class="gitem c-capture" data-tour="nav-capture" data-action="nav.capture" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">upload</span><span>الالتقاط</span><b class="cnt">3</b></button>
+<button class="gitem c-myfiles" data-tour="nav-myfiles" data-action="nav.myfiles" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">folder</span><span>ملفاتي</span><b class="cnt">2</b></button>
+<button class="gitem c-approvals" data-tour="nav-approvals" data-action="nav.approvals" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">checklist</span><span>الاعتمادات</span><b class="cnt hot">7</b></button>
+<button class="gitem c-delegation" data-action="nav.delegation" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">group</span><span>التفويض</span><b class="cnt">3</b></button>
+<div class="k" style="padding:14px 14px 4px">الوثائق</div>
+<button class="gitem c-search" data-tour="nav-search" data-action="nav.search" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>البحث</span></button>
+<button class="gitem c-search" data-action="navLib.policies" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>السياسات والتفويضات</span></button>
+<button class="gitem c-search" data-action="navLib.contracts" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>العقود واتفاقيات الخدمة</span></button>
+<button class="gitem c-search" data-action="navLib.corr" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>المراسلات</span></button>
+<div class="k" style="padding:14px 14px 4px">الأرشيف</div>
+<button class="gitem c-projects" data-action="nav.projects" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">work</span><span>المشاريع</span><b class="cnt">3</b></button>
+<button class="gitem c-records" data-action="nav.records" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">inventory_2</span><span>السجلات</span></button>
+<button class="gitem c-classify" data-action="nav.classify" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">sell</span><span>التصنيف</span><b class="cnt hot">3</b></button>
+<button class="gitem c-disposition" data-action="nav.disposition" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">delete</span><span>التصرف النهائي</span><b class="cnt">4</b></button>
+<button class="gitem c-holds" data-action="nav.holds" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">verified_user</span><span>الحجز القانوني</span></button>
+<div class="k" style="padding:14px 14px 4px">المنصة</div>
+<button class="gitem c-reports" data-action="nav.reports" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">monitoring</span><span>التقارير</span></button>
+<button class="gitem c-integration" data-action="nav.integration" aria-current="page"><span class="material-symbols-rounded" aria-hidden="true">hub</span><span>التكامل</span><b class="cnt err">3</b></button>
+<button class="gitem c-admin" data-action="nav.admin" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">settings</span><span>الإدارة</span></button>
+</nav>
+<div class="gmain">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-legacy-key="r.0.3.3.3.3.47.1" class="page sec-integration" data-screen-label="Integration">
+<div data-legacy-key="r.0.3.3.3.3.47.1.1" class="hd"><div data-legacy-key="r.0.3.3.3.3.47.1.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.1.0.0" class="k">خدمات التكامل · تسع واجهات · الاتجاه هو قرار التصميم</div><h3 data-legacy-key="r.0.3.3.3.3.47.1.1.0.1" style="margin:2px 0 0">لوحة التكامل</h3></div><div data-legacy-key="r.0.3.3.3.3.47.1.1.1" class="sp"><span data-legacy-key="r.0.3.3.3.3.47.1.1.1.0" class="text-muted" style="font-size:14px">آخر تحديث <span data-legacy-key="r.0.3.3.3.3.47.1.1.1.0.1" class="num"></span></span><button data-legacy-key="r.0.3.3.3.3.47.1.1.1.1" class="btn btn-secondary" data-legacy-click="h22">تشغيل كل المستحق</button><button data-legacy-key="r.0.3.3.3.3.47.1.1.1.2" class="btn btn-primary" data-legacy-click="h23">+ إضافة قناة</button></div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.3" class="bp" style="display:grid;grid-template-columns:repeat(5,1fr);margin:6px 0">
+<div data-legacy-key="r.0.3.3.3.3.47.1.3.1" class="stat"><div data-legacy-key="r.0.3.3.3.3.47.1.3.1.0" class="k">الموصّلات</div><div data-legacy-key="r.0.3.3.3.3.47.1.3.1.1" class="n num" style="font-size:28px">11</div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.3.3" class="stat"><div data-legacy-key="r.0.3.3.3.3.47.1.3.3.0" class="k">سليم</div><div data-legacy-key="r.0.3.3.3.3.47.1.3.3.1" class="n num ok" style="font-size:28px">9</div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.3.5" class="stat"><div data-legacy-key="r.0.3.3.3.3.47.1.3.5.0" class="k">متدنٍ / فاشل</div><div data-legacy-key="r.0.3.3.3.3.47.1.3.5.1" class="n num warn" style="font-size:28px">1</div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.3.7" class="stat"><div data-legacy-key="r.0.3.3.3.3.47.1.3.7.0" class="k">عناصر ملتقطة اليوم</div><div data-legacy-key="r.0.3.3.3.3.47.1.3.7.1" class="n num" style="font-size:28px">4,812</div><div data-legacy-key="r.0.3.3.3.3.47.1.3.7.2" class="text-muted" style="font-size:14px">عبر كل القنوات</div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.3.9" class="stat"><div data-legacy-key="r.0.3.3.3.3.47.1.3.9.0" class="k">قائمة الاستثناءات</div><div data-legacy-key="r.0.3.3.3.3.47.1.3.9.1" class="n num err" style="font-size:28px">3</div></div>
+</div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.5" class="tabs"><button data-legacy-key="r.0.3.3.3.3.47.1.5.0" aria-current="page" data-legacy-click="h24">الموصّلات</button><button data-legacy-key="r.0.3.3.3.3.47.1.5.1" aria-current="" data-legacy-click="h25">تدفقات البيانات</button><button data-legacy-key="r.0.3.3.3.3.47.1.5.2" aria-current="" data-legacy-click="h26">قائمة الاستثناءات · <span data-legacy-key="r.0.3.3.3.3.47.1.5.2.1" class="num">3</span></button><button data-legacy-key="r.0.3.3.3.3.47.1.5.3" aria-current="" data-legacy-click="h27">ربط الحقول</button><button data-legacy-key="r.0.3.3.3.3.47.1.5.4" aria-current="" data-legacy-click="h28">الترحيل</button><button data-legacy-key="r.0.3.3.3.3.47.1.5.5" aria-current="" data-legacy-click="h29">سجل التشغيل</button></div>
+
+
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1" class="intgrid">
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1" style="min-width:0">
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><input data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.0" class="input" style="width:240px" placeholder="تصفية…" value="" data-legacy-change="h30"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1" class="seg"><label data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.0" class="seg-opt"><input data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.0.0" type="radio" name="idir" value="" checked data-legacy-change="h31"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.0.1">الكل</span></label><label data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.1" class="seg-opt"><input data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.1.0" type="radio" name="idir" value="in" data-legacy-change="h32"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.1.1">وارد</span></label><label data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.2" class="seg-opt"><input data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.2.0" type="radio" name="idir" value="out" data-legacy-change="h33"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.2.1">صادر</span></label><label data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.3" class="seg-opt"><input data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.3.0" type="radio" name="idir" value="both" data-legacy-change="h34"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.1.3.1">الاتجاهان</span></label></span><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.2" class="text-muted" style="font-size:14px;margin-inline-start:auto"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.1.2.0" class="num">11</span> الموصّلات</span></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3" class="table-scroll" tabindex="0"><table data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0" class="table inttable"><thead data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0"><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0.0"><th data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0.0.0">الواجهة</th><th data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0.0.1">الاتجاه</th><th data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0.0.2" class="num">اليوم</th><th data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0.0.3">آخر تشغيل</th><th data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.0.0.4">الحالة</th></tr></thead>
+<tbody data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2">
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1" class="rowbtn" data-legacy-click="h35" style="background:var(--color-accent-100)"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">AD</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.0.0.1.0" style="font-weight:600">Active Directory · IDM (Salahyati)</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.0.0.1.1" class="text-muted" style="font-size:14px">المستخدمون والمجموعات وتسجيل الدخول — مرجع الهوية</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.1" style="white-space:nowrap">وارد<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.1.2" class="text-muted" style="font-size:14px">Directory</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.2" class="num">612</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.3" class="num" style="white-space:nowrap">09:00</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f0.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1" class="rowbtn" data-legacy-click="h36" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">ERP</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.0.0.1.0" style="font-weight:600">Oracle ERP</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.0.0.1.1" class="text-muted" style="font-size:14px">العقود وأوامر الشراء والفواتير — ارتباط لا نسخ</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.1" style="white-space:nowrap">الاتجاهان<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.1.2" class="text-muted" style="font-size:14px">ERP</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.2" class="num">188</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.3" class="num" style="white-space:nowrap">09:41</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f1.1.4.0" class="dot-warn"></span>متدنٍ</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1" class="rowbtn" data-legacy-click="h37" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">K2</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.0.0.1.0" style="font-weight:600">K2 workflow platform</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.0.0.1.1" class="text-muted" style="font-size:14px">يملك حالة الاعتماد</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.1" style="white-space:nowrap">الاتجاهان<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.1.2" class="text-muted" style="font-size:14px">Workflow</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.2" class="num">1,204</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.3" class="num" style="white-space:nowrap">09:44</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f2.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1" class="rowbtn" data-legacy-click="h38" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">SMB</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.0.0.1.0" style="font-weight:600">File servers · shares</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.0.0.1.1" class="text-muted" style="font-size:14px">مخزن قديم — تحميل جماعي ثم فروقات حتى الانتقال</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.1" style="white-space:nowrap">وارد<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.1.2" class="text-muted" style="font-size:14px">Network share</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.2" class="num">2,310</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.3" class="num" style="white-space:nowrap">02:00</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f3.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1" class="rowbtn" data-legacy-click="h39" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">SP</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.0.0.1.0" style="font-weight:600">Existing SharePoint farms</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.0.0.1.1" class="text-muted" style="font-size:14px">TalkSPS · WSPS · ICBS · مراسلات eFund</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.1" style="white-space:nowrap">الاتجاهان<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.1.2" class="text-muted" style="font-size:14px">SharePoint</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.2" class="num">420</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.3" class="num" style="white-space:nowrap">08:30</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f4.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1" class="rowbtn" data-legacy-click="h40" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">MAIL</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.0.0.1.0" style="font-weight:600">Exchange (optional)</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.0.0.1.1" class="text-muted" style="font-size:14px">التقاط المراسلات إلى مكتبة الاستلام</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.1" style="white-space:nowrap">وارد<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.1.2" class="text-muted" style="font-size:14px">Mailbox</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.2" class="num">96</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.3" class="num" style="white-space:nowrap">09:45</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f5.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1" class="rowbtn" data-legacy-click="h41" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">NLA</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.0.0.1.0" style="font-weight:600">National Archives</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.0.0.1.1" class="text-muted" style="font-size:14px">اعتماد خطة الاحتفاظ · النقل الدائم</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.1" style="white-space:nowrap">صادر<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.1.2" class="text-muted" style="font-size:14px">Export</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.2" class="num">6</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.3" class="num" style="white-space:nowrap">14 Sep</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f6.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1" class="rowbtn" data-legacy-click="h42" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">SIEM</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.0.0.1.0" style="font-weight:600">SIEM</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.0.0.1.1" class="text-muted" style="font-size:14px">المراقبة الأمنية — مستهلك للقراءة فقط</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.1" style="white-space:nowrap">صادر<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.1.2" class="text-muted" style="font-size:14px">Syslog</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.2" class="num">48,120</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.3" class="num" style="white-space:nowrap">09:45:12</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f7.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1" class="rowbtn" data-legacy-click="h43" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">GD</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.0.0.1.0" style="font-weight:600">Google Drive · Corp Comm shared drive</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.0.0.1.1" class="text-muted" style="font-size:14px">استقبال وسائط الفعاليات — تجريبي</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.1" style="white-space:nowrap">وارد<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.1.2" class="text-muted" style="font-size:14px">Google Drive</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.2" class="num">58</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.3" class="num" style="white-space:nowrap">09:40</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f8.1.4.0" class="dot-ok"></span>سليم</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1" class="rowbtn" data-legacy-click="h44" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">FTP</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.0.0.1.0" style="font-weight:600">SFTP · insurer batch drop</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.0.0.1.1" class="text-muted" style="font-size:14px">ملفات المطالبات الشهرية من الشريك</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.1" style="white-space:nowrap">وارد<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.1.2" class="text-muted" style="font-size:14px">SFTP</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.2" class="num">14</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.3" class="num" style="white-space:nowrap">01 Sep</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f9.1.4.0" class="dot-warn"></span>معطّل</td></tr>
+
+<tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1" class="rowbtn" data-legacy-click="h45" style=""><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.0.0" style="display:flex;gap:10px;align-items:center"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.0.0.0" style="width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 10px var(--font-heading)">OCR</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.0.0.1" style="min-width:0"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.0.0.1.0" style="font-weight:600">OCR · PDF/A rendition engine</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.0.0.1.1" class="text-muted" style="font-size:14px">PDF/A-2b قابل للبحث عند الالتقاط</div></div></div></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.1" style="white-space:nowrap">وارد<br data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.1.1"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.1.2" class="text-muted" style="font-size:14px">OCR engine</span></td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.2" class="num">2,406</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.3" class="num" style="white-space:nowrap">09:44</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.4" style="white-space:nowrap"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.3.0.2.0.f10.1.4.0" class="dot-ok"></span>سليم</td></tr>
+</tbody></table></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.5" class="rowbtn bp" data-legacy-click="h46" style="margin-top:14px;padding:14px;display:flex;gap:14px;align-items:center;border-style:dashed"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.5.0" style="font:600 26px var(--font-heading);color:var(--color-accent)">+</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.5.1"><b data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.5.1.0">إضافة قناة</b><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.5.1.1" class="text-muted" style="font-size:14px">قاعدة بيانات · REST · SOAP · FTP/SFTP · OneDrive · Google Drive · Dropbox · Box · بريد · ماسح…</div></div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.1.7" style="padding:12px;background:var(--color-surface);font-size:14px;margin-top:14px">ثلاث واجهات للقراءة فقط نحو النظام. يبقى Oracle مرجعاً للمعاملة؛ يحتفظ K2 بحالة الاعتماد؛ يخزّن النظام الوثيقة والنتيجة.</div>
+</div>
+<aside data-legacy-key="r.0.3.3.3.3.47.1.7.1.3" class="bp intaside" style="padding:16px;display:flex;flex-direction:column;gap:14px">
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1" style="display:flex;gap:12px;align-items:flex-start"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.0" style="width:44px;height:44px;flex:none;display:grid;place-items:center;border:1px solid var(--color-divider);color:var(--color-accent-800);font:600 12px var(--font-heading)">AD</span><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.1" style="min-width:0;flex:1"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.1.0" class="k">Directory · وارد</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.1.1" style="font:600 18px/1.15 var(--font-heading)">Active Directory · IDM (Salahyati)</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.1.2" class="text-muted" style="font-size:14px">المستخدمون والمجموعات وتسجيل الدخول — مرجع الهوية</div></div><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.2" style="white-space:nowrap;font-size:14px"><span data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.1.2.0" class="dot-ok"></span>سليم</span></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3" style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--color-divider)"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.0" class="stat" style="padding:8px 10px"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.0.0" class="k">عناصر ملتقطة اليوم</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.0.1" class="num" style="font:600 20px var(--font-heading)">612</div></div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.1" class="stat" style="padding:8px 10px"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.1.0" class="k">الخطأ</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.1.1" class="num ok" style="font:600 20px var(--font-heading)">0</div></div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.2" class="stat" style="padding:8px 10px"><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.2.0" class="k">النجاح</div><div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.3.2.1" class="num" style="font:600 20px var(--font-heading)">100%</div></div></div>
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.5" class="tabs" style="font-size:14px"><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.5.0" aria-current="page" data-legacy-click="h47">نظرة عامة</button><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.5.1" aria-current="" data-legacy-click="h48">الاتصال</button><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.5.2" aria-current="" data-legacy-click="h49">سجل التشغيل</button><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.5.3" aria-current="" data-legacy-click="h50">ربط الحقول</button></div>
+
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1" class="table-scroll" tabindex="0"><table data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0" class="table dense"><tbody data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0"><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.0"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.0.0" class="text-muted" style="width:130px">الطريقة</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.0.1" class="mono">LDAPS · Kerberos / OIDC</td></tr><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.1"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.1.0" class="text-muted">المُشغِّل</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.1.1">hourly · at sign-in</td></tr><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.2"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.2.0" class="text-muted">مالك الحقيقة</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.2.1">AD</td></tr><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.3"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.3.0" class="text-muted">مكتبة الوصول</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.3.1" class="mono">/sites/das-dropoff</td></tr><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.4"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.4.0" class="text-muted">مالك النظام (الصندوق)</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.4.1">IT Division</td></tr><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.5"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.5.0" class="text-muted">آخر تشغيل</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.5.1" class="num">09:00</td></tr><tr data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.6"><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.6.0" class="text-muted">خطوات المسار</td><td data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.7.1.0.0.6.1">AV · OCR · الاستخلاص · فحص التكرار (تجزئة) · حدث تدقيق ← SIEM</td></tr></tbody></table></div>
+
+
+
+
+<div data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.15" style="display:flex;gap:6px;flex-wrap:wrap;border-top:1px solid var(--color-divider);padding-top:12px"><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.15.0" class="btn btn-primary" data-legacy-click="h51">تشغيل الآن</button><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.15.1" class="btn btn-secondary" data-legacy-click="h52">اختبار</button><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.15.2" class="btn btn-secondary" data-legacy-click="h53">إعداد</button><button data-legacy-key="r.0.3.3.3.3.47.1.7.1.3.15.3" class="btn btn-ghost" data-legacy-click="h54">تعطيل</button></div>
+</aside></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+
+
+
+
+</div><script src="../operations-core.js?v=customer-comments-20261028-r2"></script><script src="../package-state.js?v=customer-comments-20261028-r2"></script><script src="../legacy-engine.js?v=customer-comments-20261028-r2"></script><script src="../legacy-ui.js?v=customer-comments-20261028-r2"></script><script src="../operations-ui.js?v=customer-comments-20261028-r2"></script><script src="../review-navigation.js?v=customer-comments-20261028-r2"></script><script src="../responsive-ui.js?v=customer-comments-20261028-r2"></script></body></html>

@@ -1,0 +1,311 @@
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My files · ADPF</title><link rel="stylesheet" href="../styles.css?v=customer-comments-20261028-r2"><style>
+[data-theme]{--color-accent-2:var(--color-accent);--color-accent-100:color-mix(in srgb,var(--color-accent) 8%,#fff);--color-accent-200:color-mix(in srgb,var(--color-accent) 18%,#fff);--color-accent-300:color-mix(in srgb,var(--color-accent) 32%,#fff);--color-accent-400:color-mix(in srgb,var(--color-accent) 55%,#fff);--color-accent-500:var(--color-accent);--color-accent-600:color-mix(in srgb,var(--color-accent) 88%,#000);--color-accent-700:color-mix(in srgb,var(--color-accent) 72%,#000);--color-accent-800:color-mix(in srgb,var(--color-accent) 55%,#000);--color-accent-900:color-mix(in srgb,var(--color-accent) 38%,#000);--color-accent-2-100:var(--color-accent-100);--color-accent-2-800:var(--color-accent-800)}
+[data-theme="green"]{--color-accent:#2e9e6e}
+[data-theme="steel"]{--color-accent:#5980a6}
+[data-theme="teal"]{--color-accent:#2a8a9e}
+[data-theme="navy"]{--color-accent:#2f6288}
+[data-theme="violet"]{--color-accent:#7a4fb3}
+[data-theme="plum"]{--color-accent:#a2497e}
+[data-theme="amber"]{--color-accent:#a06d12}
+[data-theme="clay"]{--color-accent:#a84f2e}
+[data-mode="dark"]{--color-bg:#17191b;--color-surface:#212427;--color-text:#e7e8e9;--color-divider:#43484d;--color-neutral-100:#26292c;--color-neutral-200:#2e3236;--color-neutral-300:#3b4045;--color-neutral-400:#5c636a;--color-neutral-500:#8a9096;--color-neutral-600:#a6adb4;--color-neutral-700:#c3c9cf;--shadow-sm:none;--shadow-md:none;--shadow-lg:0 8px 24px rgba(0,0,0,.55)}
+[data-mode="dark"] .prev{background:var(--color-surface)}
+[data-side="min"] .shell{grid-template-columns:56px minmax(0,1fr)}
+[data-side="min"] .gside .k,[data-side="min"] .gside .gitem span,[data-side="min"] .gside .cnt{display:none}
+[data-side="min"] .gitem{justify-content:center;padding:10px 0}
+[data-header="static"] .nav{position:static}
+[data-header="static"] .gside{position:static;height:auto}
+[data-width="boxed"] .gmain{max-width:1200px;width:100%;margin-inline:auto;border-inline-end:1px solid var(--color-divider)}
+[data-font="plex"]{--font-body:"Roboto",sans-serif;--font-heading:"Roboto",sans-serif}
+[data-font="system"]{--font-body:system-ui,sans-serif;--font-heading:system-ui,sans-serif}
+[data-font="georgia"]{--font-body:Georgia,serif;--font-heading:Georgia,serif}
+[data-fs="s"] .gmain{zoom:.92}[data-fs="l"] .gmain{zoom:1.08}
+[data-motion="off"] *{transition:none !important;animation:none !important}
+[data-contrast="on"]{--color-divider:#686d73;--color-neutral-500:#454a50;--color-neutral-600:#2f3337}
+[data-links="on"] a,[data-links="on"] .btn-ghost{text-decoration:underline}
+[data-targets="on"] .btn{min-height:44px}[data-targets="on"] .input{min-height:42px}[data-targets="on"] .table td{padding-block:12px}
+[data-density="comfortable"] .table td,[data-density="comfortable"] .table th{padding:13px 12px}
+[data-density="comfortable"] .page{padding:30px 36px;gap:22px}
+.palcard{border:1px solid var(--color-divider);background:var(--color-surface);padding:10px 12px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;font:inherit;font-size:14px;cursor:pointer;text-align:start;color:inherit}
+.palcard i{width:24px;height:15px;display:block}
+.palcard b{font:600 13px var(--font-heading)}
+.palcard:hover{background:var(--color-accent-100)}
+.palcard[aria-current="page"]{outline:2px solid var(--color-accent);outline-offset:2px}
+@keyframes dasspin{to{transform:rotate(360deg)}}
+@keyframes dasbar{0%{inset-inline-start:-30%}100%{inset-inline-start:100%}}
+@keyframes dasdots{0%,80%,100%{opacity:.25}40%{opacity:1}}
+body{margin:0;min-height:100vh}
+[dir="rtl"]{font-family:"Noto Kufi Arabic",sans-serif}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] h4,[dir="rtl"] h5,[dir="rtl"] .nav-brand,[dir="rtl"] .card-title{font-family:var(--font-heading);letter-spacing:0}
+[dir="rtl"] .k,[dir="rtl"] h6,[dir="rtl"] .table th{letter-spacing:0}
+a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-900)}
+.req{color:var(--color-accent-700);font-weight:600;margin-inline-start:2px}
+.sys,.opt{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-600);margin-inline-start:6px}
+.opt{color:var(--color-neutral-500)}
+.k{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;direction:ltr;unicode-bidi:isolate;display:inline-block}
+.num{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:2px 8px;border:1px solid currentColor;font-weight:600;white-space:nowrap}
+.p-open{color:#2f6f3f}.p-sens{color:#8a5d10}.p-conf{color:#9a4420}.p-secr{color:#7d1f2e}
+.side a,.side button{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:start;background:none;border:0;font:inherit;cursor:pointer;padding:9px 14px;font-size:14px;color:inherit;text-decoration:none;border-inline-start:3px solid transparent}
+.side a:hover,.side button:hover{background:var(--color-accent-100)}
+.side [aria-current="page"]{border-inline-start-color:var(--color-accent);background:var(--color-accent-100);font-weight:600}
+.step{display:flex;align-items:center;gap:8px;font-size:14px}
+.step i{width:10px;height:10px;display:block;border:1.5px solid var(--color-neutral-500);flex:none}
+.step.done i{background:var(--color-accent);border-color:var(--color-accent)}
+.step.cur i{border-color:var(--color-accent);background:var(--color-accent-200)}
+.table td,.table th{vertical-align:middle;text-align:start}
+.table td.num,.table th.num{text-align:end}
+td.mono{display:table-cell}
+[dir="rtl"] .table td.mono{text-align:right}
+[dir="ltr"] .table td.mono{text-align:left}
+.bp{position:relative;border:1px solid var(--color-divider)}
+.bp>.corner{position:absolute;width:11px;height:11px;color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+.bp>.corner::before,.bp>.corner::after{content:"";position:absolute;background:currentColor}
+.bp>.corner::before{left:5px;top:0;width:1px;height:100%}.bp>.corner::after{top:5px;left:0;width:100%;height:1px}
+.bp>.corner.tl{top:-6px;left:-6px}.bp>.corner.tr{top:-6px;right:-6px}.bp>.corner.bl{bottom:-6px;left:-6px}.bp>.corner.br{bottom:-6px;right:-6px}
+.corner{pointer-events:none}
+.intgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,400px);gap:24px;align-items:start}
+.clsgrid{display:grid;grid-template-columns:260px minmax(0,1fr);flex:1}
+.tabs{flex-wrap:wrap}.tabs button{white-space:nowrap}
+.bp[style*="repeat(5,1fr)"],.bp[style*="repeat(6,1fr)"]{grid-template-columns:repeat(auto-fit,minmax(120px,1fr)) !important}
+@container (max-width:900px){.clsgrid{grid-template-columns:minmax(0,1fr)}.clsgrid>div:first-child{border-inline-end:0;border-bottom:1px solid var(--color-divider)}.clsgrid .side{max-height:240px}}
+.intaside{position:sticky;top:72px}
+.page{container-type:inline-size}
+@container (max-width:1060px){.intgrid{grid-template-columns:minmax(0,1fr)}.intaside{position:static}}
+.gmain{container-type:inline-size}
+.inttable th,.inttable td{white-space:nowrap}.inttable td:first-child{white-space:normal}
+.nav{gap:var(--space-2) var(--space-3)}
+.nav .k{display:none}
+@media (min-width:1180px){.nav{gap:var(--space-3) var(--space-4)}.nav .k{display:inline}}
+.node{border-radius:0}.chip,.pill,.toast,.input,.seg,.btn{border-radius:0}
+:root{--c-projects:#c2612f;--c-classify:#2a8a9e;--c-delegation:#a5671c;--c-home:#2e9e6e;--c-capture:#2f7fbf;--c-approvals:#d08a1d;--c-search:#5f6fb8;--c-records:#1f8f8a;--c-disposition:#b5563a;--c-holds:#8c2f45;--c-integration:#7a4fb3;--c-admin:#5a6675;--c-myfiles:#a2497e;--c-reports:#346e8f}
+.shell{display:grid;grid-template-columns:232px minmax(0,1fr);flex:1;min-height:0}
+.gside{border-inline-end:1px solid var(--color-divider);padding:12px 0;display:flex;flex-direction:column;position:sticky;top:57px;height:calc(100vh - 57px);overflow:auto;background:var(--color-surface)}
+.gmain{min-width:0;display:flex;flex-direction:column}
+.gitem{display:flex;align-items:center;gap:10px;width:100%;text-align:start;background:none;border:0;border-inline-start:3px solid transparent;font:inherit;font-size:14px;color:inherit;cursor:pointer;padding:8px 14px 8px 11px}
+.gitem i{width:10px;height:10px;flex:none;background:var(--sec)}
+.gitem span{flex:1}.gitem .cnt{font-size:14px;padding:1px 7px;border:1px solid var(--color-divider);color:var(--color-neutral-700);font-weight:600;font-variant-numeric:tabular-nums}
+.gitem .cnt.hot{background:var(--c-approvals);border-color:var(--c-approvals);color:#fff}.gitem .cnt.err{background:var(--c-disposition);border-color:var(--c-disposition);color:#fff}
+.gitem:hover{background:color-mix(in srgb,var(--sec) 10%,transparent)}
+.gitem[aria-current="page"]{background:var(--sec);border-inline-start-color:var(--sec);color:#fff;font-weight:600}
+.gitem[aria-current="page"] i{background:#fff}
+.gitem[aria-current="page"] .cnt{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.18)}
+.gitem[aria-current="page"] .cnt.hot,.gitem[aria-current="page"] .cnt.err{background:#fff;color:var(--sec);border-color:#fff}
+.c-home{--sec:var(--c-home)}.c-projects{--sec:var(--c-projects)}.c-classify{--sec:var(--c-classify)}.c-delegation{--sec:var(--c-delegation)}.sec-projects{--sec:var(--c-projects)}.sec-classify{--sec:var(--c-classify)}.sec-delegation{--sec:var(--c-delegation)}
+.lvl{display:inline-grid;place-items:center;width:16px;height:16px;font:600 9px var(--font-heading);color:#fff;flex:none}.lvl.l1{background:#2a8a9e}.lvl.l2{background:#5fa9b8}.lvl.l3{background:#98c7d0;color:#123}
+.tag-status-ok,.tag-status-warn,.tag-status-err{display:inline-flex;align-items:center;padding:2px 8px;font-size:14px;font-weight:600;border:1px solid}.c-capture{--sec:var(--c-capture)}.c-approvals{--sec:var(--c-approvals)}.c-search{--sec:var(--c-search)}.c-records{--sec:var(--c-records)}.c-disposition{--sec:var(--c-disposition)}.c-holds{--sec:var(--c-holds)}.c-integration{--sec:var(--c-integration)}.c-admin{--sec:var(--c-admin)}
+.sec-home{--sec:var(--c-home)}.sec-capture{--sec:var(--c-capture)}.sec-approvals{--sec:var(--c-approvals)}.sec-search{--sec:var(--c-search)}.sec-records{--sec:var(--c-records)}.sec-disposition{--sec:var(--c-disposition)}.sec-holds{--sec:var(--c-holds)}.sec-integration{--sec:var(--c-integration)}.sec-admin{--sec:var(--c-admin)}.c-myfiles{--sec:var(--c-myfiles)}.sec-myfiles{--sec:var(--c-myfiles)}.c-reports{--sec:var(--c-reports)}.sec-reports{--sec:var(--c-reports)}
+.hbar{display:grid;grid-template-columns:110px minmax(0,1fr) 44px;align-items:center;gap:10px;font-size:14px}
+.hbar .trk{height:12px;background:var(--color-neutral-200);position:relative}
+.hbar .trk i{position:absolute;inset-block:0;inset-inline-start:0;background:var(--sec,var(--color-accent))}
+.hbar .trk b{position:absolute;inset-block:-3px;width:2px;background:var(--color-text)}
+[dir="rtl"] svg{direction:ltr}
+[class*="sec-"] .hd>div:first-child>.k,[class*="sec-"]>div:first-child>div:first-child>.k{color:var(--sec)}
+[class*="sec-"] .hd h3,[class*="sec-"] h3{border-inline-start:4px solid var(--sec);padding-inline-start:10px}
+[class*="sec-"] .tabs button[aria-current="page"]{border-bottom-color:var(--sec)}
+[class*="sec-"] .stat .n{color:color-mix(in srgb,var(--sec) 70%,var(--color-text))}
+.stat .n.ok,.ok{color:#2f6f3f}.stat .n.warn,.warn{color:#a8720f}.stat .n.err,.err{color:#9a4420}
+.p-open{background:#e3f3e7;border-color:#9fd1ac}.p-sens{background:#fbf0d9;border-color:#e6c680}.p-conf{background:#fbeee8;border-color:#e0b39c}.p-secr{background:#f6e4e8;border-color:#d9a3af}
+.side [aria-current="page"]{border-inline-start-color:var(--sec,var(--color-accent));background:var(--sec,var(--color-accent));color:#fff}
+.side [aria-current="page"] .tag,.side [aria-current="page"] .mono{color:#fff;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5)}
+.side a[aria-current="page"]:hover,.side button[aria-current="page"]:hover{background:var(--sec,var(--color-accent));color:#fff}
+.gitem[aria-current="page"]:hover{background:var(--sec)}
+.tabs button[aria-current="page"]:hover{background:var(--sec,var(--color-accent));color:#fff}
+.tabs button[aria-current="page"]{background:var(--sec,var(--color-accent));color:#fff;border-bottom-color:var(--sec,var(--color-accent))}
+@media (max-width:900px){.shell{grid-template-columns:56px minmax(0,1fr)}.gside .k,.gside .gitem span,.gside .cnt,.gside .gkey{display:none}.gitem{justify-content:center;padding:10px 0}}
+.table.dense td,.table.dense th{padding:6px 8px;font-size:14px}
+.rowbtn{cursor:pointer}.rowbtn:hover td{background:var(--color-accent-100)}
+.stat{padding:14px 16px;border-inline-end:1px solid var(--color-divider)}.stat:last-child{border-inline-end:0}
+.stat .n{font:600 34px/1.1 var(--font-heading)}
+.node{border:1px solid var(--color-divider);background:var(--color-surface);padding:10px 12px;min-width:160px;font-size:14px}
+.node.gate{border-color:var(--color-accent);border-width:2px}
+.node .k{display:block;margin-bottom:2px}
+.arrow{width:32px;height:2px;background:var(--color-divider);align-self:center;flex:none;position:relative}
+.arrow::after{content:"";position:absolute;inset-inline-end:-1px;top:-4px;border:5px solid transparent;border-inline-start-color:var(--color-divider)}
+.ev{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--color-divider);font-size:14px}
+.ev .t{font-family:ui-monospace,Menlo,monospace;font-size:14px;color:var(--color-neutral-600);direction:ltr}
+.tabs{display:flex;border-bottom:2px solid var(--color-divider);gap:2px}
+.tabs button{padding:10px 16px;font:inherit;font-size:14px;color:inherit;background:none;border:0;cursor:pointer;margin-bottom:-2px;border-bottom:2px solid transparent}
+.tabs button[aria-current="page"]{border-bottom-color:var(--color-accent);font-weight:600}
+.ok{color:#2f6f3f;font-weight:600}.warn{color:#8a5d10;font-weight:600}.err{color:#9a4420;font-weight:600}
+.nav{flex-wrap:wrap;gap:var(--space-3) var(--space-4)}
+.nav>*{flex:none}
+.nav .seg{flex:none}.seg-opt{white-space:nowrap}
+.nav button{background:none;border:0;font:inherit;font-size:14px;color:inherit;cursor:pointer;padding:0;white-space:nowrap}
+.nav button:hover,.nav button[aria-current="page"]{color:var(--color-accent)}
+.field.bad .input{border-color:#9a4420}
+.field .hint{font-size:14px;color:var(--color-neutral-600);margin-top:3px}
+.toast{position:fixed;bottom:20px;inset-inline-start:20px;background:var(--color-accent-900);color:#fff;padding:12px 16px;font-size:14px;box-shadow:var(--shadow-lg);z-index:50;max-width:420px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:3px 8px;background:var(--color-accent-100);color:var(--color-accent-900);border:1px solid var(--color-accent-300)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;align-content:start}
+.page{padding:22px 28px;display:flex;flex-direction:column;gap:16px}
+.hd{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.hd .sp{margin-inline-start:auto;display:flex;gap:8px;align-items:center}
+.prev{background:#fff;border:1px solid var(--color-divider);padding:20px;color:var(--color-neutral-500);font-size:14px;display:flex;flex-direction:column;gap:8px}
+.prev b{display:block;height:8px;background:var(--color-neutral-200)}
+.dot-ok,.dot-warn,.dot-err{display:inline-block;width:9px;height:9px;margin-inline-end:6px;vertical-align:middle}
+.dot-ok{background:#2f6f3f}.dot-warn{background:#c8921d}.dot-err{background:#9a4420}
+.acct-i{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid currentColor;font:600 9px var(--font-heading);flex:none}
+.mfgrid{display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px;align-items:start}
+@container (max-width:860px){.mfgrid{grid-template-columns:minmax(0,1fr)}}
+[data-density="compact"] .table td,[data-density="compact"] .table th{padding:5px 7px;font-size:12.5px}
+[data-density="compact"] .page{padding:14px 20px;gap:12px}
+[data-density="compact"] .stat .n{font-size:26px}
+.bfgrid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;align-items:start}
+@container (max-width:1020px){.bfgrid{grid-template-columns:minmax(0,1fr)}.bfgrid aside{position:static}}
+.introjs-tooltip{border-radius:0;border:1px solid var(--color-divider);box-shadow:var(--shadow-lg);font-family:var(--font-body);overflow:visible;min-width:330px;max-width:400px;background:#fff}
+.introjs-tooltiptext{font-size:14px;line-height:1.55;padding:16px 20px 8px}
+.introjs-helperLayer{border-radius:0}
+body:has([data-theme="green"]) .introjs-tooltip{--color-accent:#2e9e6e;--color-accent-100:#eef8f2;--color-accent-600:#2b8f66;--color-accent-700:#1f6f4f}
+.dgchar{position:absolute;bottom:-6px;width:118px;pointer-events:none;filter:drop-shadow(2px 6px 8px rgba(0,0,0,.28))}
+.dgk{display:flex;justify-content:space-between;align-items:baseline;font:600 10px var(--font-heading);letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700)}
+.dgk .dgn{letter-spacing:.02em;color:var(--color-neutral-600);font-variant-numeric:tabular-nums}
+.dgt{font:600 21px/1.15 var(--font-heading);margin:7px 0 8px;color:var(--color-text)}
+.dgq{font-size:13.5px;line-height:1.62;color:var(--color-text)}
+.dgby{margin-top:9px;font-size:14px;color:var(--color-neutral-600)}
+.introjs-tooltipbuttons{border-top:1px solid var(--color-divider);padding:10px 20px}
+@media (max-width:760px){.dgchar{display:none}}
+.introjs-button{border-radius:0;text-shadow:none;font:inherit;font-size:14px;padding:6px 14px;border:1px solid var(--color-divider);background:#fff;color:var(--color-text)}
+.introjs-button:hover,.introjs-button:focus{background:var(--color-accent-100);border-color:var(--color-divider);color:var(--color-text);box-shadow:none}
+.introjs-nextbutton,.introjs-nextbutton:hover,.introjs-nextbutton:focus{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+.introjs-progress{border-radius:0;background:var(--color-neutral-200)}
+.introjs-progressbar{border-radius:0;background:var(--color-accent)}
+[dir="rtl"] .introjs-tooltip{font-family:"Roboto",var(--font-body);text-align:right;direction:rtl}
+</style><link rel="stylesheet" href="../alternative.css?v=customer-comments-20261028-r2"><link rel="stylesheet" href="../operations.css?v=customer-comments-20261028-r2"></head><body>
+
+
+<div data-theme="green" data-density="default" data-mode="light" data-radius="round" data-side="expanded" data-header="fixed" data-width="fluid" data-font="plex" data-fs="m" data-motion="on" data-contrast="off" data-links="off" data-targets="off" dir="ltr" lang="en" style="min-height:100vh;background:var(--color-bg);color:var(--color-text);display:flex;flex-direction:column">
+
+
+
+<div class="nav" style="position:sticky;top:0;background:var(--color-bg);z-index:10;border-bottom:1px solid var(--color-divider)">
+<div style="display:flex;align-items:center;gap:12px;margin-inline-end:auto;flex:none"><img src="../uploads/adpf-logo.png" alt="Abu Dhabi Pension Fund" style="height:40px;width:auto"><span style="width:1px;height:28px;background:var(--color-divider)"></span><div style="display:flex;flex-direction:column;line-height:1.1;justify-content:center">
+<span class="nav-brand" style="margin:0;font-size:26px;line-height:1">DAS</span>
+<span style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-800);font-weight:600;white-space:nowrap;font-family:var(--font-heading)">Document Archiving System</span>
+</div></div>
+
+<button data-action="startTour" style="font-weight:600">? Guide</button>
+<span class="seg" style="margin-inline-start:8px" data-tour="lang"><label class="seg-opt"><input type="radio" name="lang" value="en" checked data-action="setLang"><span>English</span></label><label class="seg-opt"><input type="radio" name="lang" value="ar" data-action="setLang"><span>العربية</span></label></span>
+<div class="account-navigation">
+<button class="account-search" data-action="nav.search" aria-label="Search"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+<details class="account-menu"><summary aria-label="Account menu"><span class="account-avatar">AA</span><span class="account-summary"><strong>Abeer A. · IT Division</strong><small>ADPF workspace</small></span><span class="material-symbols-rounded account-chevron" aria-hidden="true">expand_more</span></summary>
+<div class="account-popover"><div class="account-identity"><span class="account-avatar">AA</span><div><strong>Abeer A. · IT Division</strong><small>ADPF workspace</small></div></div>
+<div class="appearance-switch" role="group" aria-label="Appearance"><button type="button" data-appearance-choice="system" aria-pressed="false"><span class="material-symbols-rounded" aria-hidden="true">desktop_windows</span>System</button><button type="button" data-appearance-choice="light" aria-pressed="true"><span class="material-symbols-rounded" aria-hidden="true">light_mode</span>Light</button><button type="button" data-appearance-choice="dark" aria-pressed="false"><span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>Dark</button></div>
+<div class="account-actions"><a class="account-settings" href="settings.html"><span class="material-symbols-rounded" aria-hidden="true">tune</span>My settings</a><button type="button" data-action="signOut"><span class="material-symbols-rounded" aria-hidden="true">logout</span>Sign out</button></div></div></details></div>
+</div>
+
+
+<div class="shell">
+<nav class="gside" aria-label="Main">
+<div class="k" style="padding:6px 14px 4px">My work</div>
+<button class="gitem c-home" data-action="nav.home" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">home</span><span>Home</span></button>
+<button class="gitem c-capture" data-tour="nav-capture" data-action="nav.capture" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">upload</span><span>Capture</span><b class="cnt">3</b></button>
+<button class="gitem c-myfiles" data-tour="nav-myfiles" data-action="nav.myfiles" aria-current="page"><span class="material-symbols-rounded" aria-hidden="true">folder</span><span>My Files</span><b class="cnt">2</b></button>
+<button class="gitem c-approvals" data-tour="nav-approvals" data-action="nav.approvals" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">checklist</span><span>Approvals</span><b class="cnt hot">7</b></button>
+<button class="gitem c-delegation" data-action="nav.delegation" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">group</span><span>Delegation</span><b class="cnt">3</b></button>
+<div class="k" style="padding:14px 14px 4px">Documents</div>
+<button class="gitem c-search" data-tour="nav-search" data-action="nav.search" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>Search</span></button>
+<button class="gitem c-search" data-action="navLib.policies" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>Policies &amp; Delegations</span></button>
+<button class="gitem c-search" data-action="navLib.contracts" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>Contracts &amp; SLAs</span></button>
+<button class="gitem c-search" data-action="navLib.corr" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>Correspondence</span></button>
+<div class="k" style="padding:14px 14px 4px">Archive</div>
+<button class="gitem c-projects" data-action="nav.projects" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">work</span><span>Projects</span><b class="cnt">3</b></button>
+<button class="gitem c-records" data-action="nav.records" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">inventory_2</span><span>Records</span></button>
+<button class="gitem c-classify" data-action="nav.classify" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">sell</span><span>Classification</span><b class="cnt hot">3</b></button>
+<button class="gitem c-disposition" data-action="nav.disposition" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">delete</span><span>Disposition</span><b class="cnt">4</b></button>
+<button class="gitem c-holds" data-action="nav.holds" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">verified_user</span><span>Legal holds</span></button>
+<div class="k" style="padding:14px 14px 4px">Platform</div>
+<button class="gitem c-reports" data-action="nav.reports" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">monitoring</span><span>Reports</span></button>
+<button class="gitem c-integration" data-action="nav.integration" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">hub</span><span>Integration</span><b class="cnt err">3</b></button>
+<button class="gitem c-admin" data-action="nav.admin" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">settings</span><span>Admin</span></button>
+</nav>
+<div class="gmain">
+
+
+
+
+
+
+
+
+<div data-legacy-key="r.0.3.3.3.3.8.1" class="page sec-myfiles" data-screen-label="My Files">
+<div data-legacy-key="r.0.3.3.3.3.8.1.1" class="hd"><div data-legacy-key="r.0.3.3.3.3.8.1.1.0"><div data-legacy-key="r.0.3.3.3.3.8.1.1.0.0" class="k">Connected platforms · personal scope · OAuth per user</div><h3 data-legacy-key="r.0.3.3.3.3.8.1.1.0.1" style="margin:2px 0 0">My Files</h3></div><div data-legacy-key="r.0.3.3.3.3.8.1.1.1" class="sp"><button data-legacy-key="r.0.3.3.3.3.8.1.1.1.0" class="btn btn-secondary" data-legacy-click="h22">Upload from this device</button><button data-legacy-key="r.0.3.3.3.3.8.1.1.1.1" class="btn btn-primary" data-tour="mf-connect" data-legacy-click="h23">+ Connect account</button></div></div>
+<div data-legacy-key="r.0.3.3.3.3.8.1.3" class="tabs" data-tour="mf-tabs"><button data-legacy-key="r.0.3.3.3.3.8.1.3.0" aria-current="page" data-legacy-click="h24">Browse sources</button><button data-legacy-key="r.0.3.3.3.3.8.1.3.1" aria-current="" data-legacy-click="h25">Transfers · <span data-legacy-key="r.0.3.3.3.3.8.1.3.1.1" class="num">2</span></button></div>
+
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1" class="mfgrid">
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1" class="side" data-tour="mf-accounts" style="border:1px solid var(--color-divider);padding:8px 0">
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.1" class="k" style="padding:4px 14px 8px">Connected accounts</div>
+<button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f0.0" data-legacy-click="h26" aria-current="page"><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f0.0.0" style="display:flex;align-items:center;gap:8px"><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f0.0.0.0" class="acct-i">OD</span>OneDrive — Abeer</span><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f0.0.1" class="ok" style="font-size:14px">●</span></button><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f1.0" data-legacy-click="h27" aria-current=""><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f1.0.0" style="display:flex;align-items:center;gap:8px"><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f1.0.0.0" class="acct-i">GD</span>Google Drive — IT shared</span><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f1.0.1" class="ok" style="font-size:14px">●</span></button><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f2.0" data-legacy-click="h28" aria-current=""><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f2.0.0" style="display:flex;align-items:center;gap:8px"><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f2.0.0.0" class="acct-i">DB</span>Dropbox — personal</span><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f2.0.1" class="warn" style="font-size:14px">▲</span></button><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f3.0" data-legacy-click="h29" aria-current=""><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f3.0.0" style="display:flex;align-items:center;gap:8px"><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f3.0.0.0" class="acct-i">SP</span>SharePoint — IT policies library</span><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f3.0.1" class="ok" style="font-size:14px">●</span></button><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f4.0" data-legacy-click="h30" aria-current=""><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f4.0.0" style="display:flex;align-items:center;gap:8px"><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f4.0.0.0" class="acct-i">OR</span>Oracle ERP — attachments</span><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.3.f4.0.1" class="ok" style="font-size:14px">●</span></button>
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.5" class="text-muted" style="padding:10px 14px;font-size:14px;line-height:1.5">Each account is authorised in your own name; the Fund never stores your password. Admin-managed channels live in the Integration console.</div>
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.7" style="border-top:1px solid var(--color-divider);margin:0 14px;padding:12px 0 6px;display:flex;flex-direction:column;gap:8px">
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.7.1" class="k">Excel metadata import</div>
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.7.3" class="text-muted" style="font-size:14px;line-height:1.5">Bulk-import files with metadata using the register-format template — same columns as سجلات الإدارات.</div>
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.7.5" style="display:flex;gap:6px;flex-wrap:wrap"><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.7.5.0" class="btn btn-ghost" style="padding:4px 8px;font-size:14px" data-legacy-click="h31">Template ↓</button><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.1.7.5.1" class="btn btn-secondary" style="padding:4px 10px;font-size:14px" data-legacy-click="h32">Upload filled template</button></div>
+</div>
+</div>
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.3" style="display:flex;flex-direction:column;gap:10px;min-width:0">
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.1" style="display:flex;align-items:center;gap:2px;font-size:14px;flex-wrap:wrap"><button data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.1.0.f0.0" class="btn btn-ghost" style="padding:2px 6px" data-legacy-click="h33">OneDrive</button><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.1.0.f0.1" class="text-muted">/</span><span data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.1.1" class="text-muted num" style="margin-inline-start:auto;font-size:14px">0 selected</span></div>
+<div data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3" class="table-scroll" tabindex="0"><table data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0" class="table dense" data-tour="mf-files"><thead data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0"><tr data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0.0"><th data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0.0.0" style="width:30px"></th><th data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0.0.1">Name</th><th data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0.0.2">Kind</th><th data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0.0.3">Modified</th><th data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.0.0.4" class="num">Size</th></tr></thead><tbody data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1">
+<tr data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0" class="rowbtn" data-legacy-click="h36" style="cursor:pointer"><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.0" data-legacy-click="h35"><input data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.0.0" type="checkbox" data-legacy-change="h34"></td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.1"><i data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.1.0" style="display:inline-block;width:10px;height:10px;background:var(--sec);margin-inline-end:8px"></i>ADPF</td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.2" class="text-muted">Folder <span data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.2.1" style="font-size:14px">· 12 items</span></td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.3" class="num">2026-09-27</td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f0.0.4" class="num">—</td></tr><tr data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0" class="rowbtn" data-legacy-click="h39" style="cursor:pointer"><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.0" data-legacy-click="h38"><input data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.0.0" type="checkbox" data-legacy-change="h37"></td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.1"><i data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.1.0" style="display:inline-block;width:10px;height:10px;background:var(--sec);margin-inline-end:8px"></i>Scans from mobile</td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.2" class="text-muted">Folder <span data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.2.1" style="font-size:14px">· 3 items</span></td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.3" class="num">2026-09-28</td><td data-legacy-key="r.0.3.3.3.3.8.1.5.1.3.3.0.1.1.f1.0.4" class="num">—</td></tr>
+</tbody></table></div>
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+
+
+
+
+</div><script src="../operations-core.js?v=customer-comments-20261028-r2"></script><script src="../package-state.js?v=customer-comments-20261028-r2"></script><script src="../legacy-engine.js?v=customer-comments-20261028-r2"></script><script src="../legacy-ui.js?v=customer-comments-20261028-r2"></script><script src="../operations-ui.js?v=customer-comments-20261028-r2"></script><script src="../review-navigation.js?v=customer-comments-20261028-r2"></script><script src="../responsive-ui.js?v=customer-comments-20261028-r2"></script></body></html>
