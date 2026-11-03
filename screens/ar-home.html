@@ -1,0 +1,228 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard · ADPF</title><link rel="stylesheet" href="../styles.css?v=customer-comments-20261028-r2"><style>
+[data-theme]{--color-accent-2:var(--color-accent);--color-accent-100:color-mix(in srgb,var(--color-accent) 8%,#fff);--color-accent-200:color-mix(in srgb,var(--color-accent) 18%,#fff);--color-accent-300:color-mix(in srgb,var(--color-accent) 32%,#fff);--color-accent-400:color-mix(in srgb,var(--color-accent) 55%,#fff);--color-accent-500:var(--color-accent);--color-accent-600:color-mix(in srgb,var(--color-accent) 88%,#000);--color-accent-700:color-mix(in srgb,var(--color-accent) 72%,#000);--color-accent-800:color-mix(in srgb,var(--color-accent) 55%,#000);--color-accent-900:color-mix(in srgb,var(--color-accent) 38%,#000);--color-accent-2-100:var(--color-accent-100);--color-accent-2-800:var(--color-accent-800)}
+[data-theme="green"]{--color-accent:#2e9e6e}
+[data-theme="steel"]{--color-accent:#5980a6}
+[data-theme="teal"]{--color-accent:#2a8a9e}
+[data-theme="navy"]{--color-accent:#2f6288}
+[data-theme="violet"]{--color-accent:#7a4fb3}
+[data-theme="plum"]{--color-accent:#a2497e}
+[data-theme="amber"]{--color-accent:#a06d12}
+[data-theme="clay"]{--color-accent:#a84f2e}
+[data-mode="dark"]{--color-bg:#17191b;--color-surface:#212427;--color-text:#e7e8e9;--color-divider:#43484d;--color-neutral-100:#26292c;--color-neutral-200:#2e3236;--color-neutral-300:#3b4045;--color-neutral-400:#5c636a;--color-neutral-500:#8a9096;--color-neutral-600:#a6adb4;--color-neutral-700:#c3c9cf;--shadow-sm:none;--shadow-md:none;--shadow-lg:0 8px 24px rgba(0,0,0,.55)}
+[data-mode="dark"] .prev{background:var(--color-surface)}
+[data-side="min"] .shell{grid-template-columns:56px minmax(0,1fr)}
+[data-side="min"] .gside .k,[data-side="min"] .gside .gitem span,[data-side="min"] .gside .cnt{display:none}
+[data-side="min"] .gitem{justify-content:center;padding:10px 0}
+[data-header="static"] .nav{position:static}
+[data-header="static"] .gside{position:static;height:auto}
+[data-width="boxed"] .gmain{max-width:1200px;width:100%;margin-inline:auto;border-inline-end:1px solid var(--color-divider)}
+[data-font="plex"]{--font-body:"Roboto",sans-serif;--font-heading:"Roboto",sans-serif}
+[data-font="system"]{--font-body:system-ui,sans-serif;--font-heading:system-ui,sans-serif}
+[data-font="georgia"]{--font-body:Georgia,serif;--font-heading:Georgia,serif}
+[data-fs="s"] .gmain{zoom:.92}[data-fs="l"] .gmain{zoom:1.08}
+[data-motion="off"] *{transition:none !important;animation:none !important}
+[data-contrast="on"]{--color-divider:#686d73;--color-neutral-500:#454a50;--color-neutral-600:#2f3337}
+[data-links="on"] a,[data-links="on"] .btn-ghost{text-decoration:underline}
+[data-targets="on"] .btn{min-height:44px}[data-targets="on"] .input{min-height:42px}[data-targets="on"] .table td{padding-block:12px}
+[data-density="comfortable"] .table td,[data-density="comfortable"] .table th{padding:13px 12px}
+[data-density="comfortable"] .page{padding:30px 36px;gap:22px}
+.palcard{border:1px solid var(--color-divider);background:var(--color-surface);padding:10px 12px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;font:inherit;font-size:14px;cursor:pointer;text-align:start;color:inherit}
+.palcard i{width:24px;height:15px;display:block}
+.palcard b{font:600 13px var(--font-heading)}
+.palcard:hover{background:var(--color-accent-100)}
+.palcard[aria-current="page"]{outline:2px solid var(--color-accent);outline-offset:2px}
+@keyframes dasspin{to{transform:rotate(360deg)}}
+@keyframes dasbar{0%{inset-inline-start:-30%}100%{inset-inline-start:100%}}
+@keyframes dasdots{0%,80%,100%{opacity:.25}40%{opacity:1}}
+body{margin:0;min-height:100vh}
+[dir="rtl"]{font-family:"Noto Kufi Arabic",sans-serif}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] h4,[dir="rtl"] h5,[dir="rtl"] .nav-brand,[dir="rtl"] .card-title{font-family:var(--font-heading);letter-spacing:0}
+[dir="rtl"] .k,[dir="rtl"] h6,[dir="rtl"] .table th{letter-spacing:0}
+a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-900)}
+.req{color:var(--color-accent-700);font-weight:600;margin-inline-start:2px}
+.sys,.opt{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-600);margin-inline-start:6px}
+.opt{color:var(--color-neutral-500)}
+.k{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;direction:ltr;unicode-bidi:isolate;display:inline-block}
+.num{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:2px 8px;border:1px solid currentColor;font-weight:600;white-space:nowrap}
+.p-open{color:#2f6f3f}.p-sens{color:#8a5d10}.p-conf{color:#9a4420}.p-secr{color:#7d1f2e}
+.side a,.side button{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:start;background:none;border:0;font:inherit;cursor:pointer;padding:9px 14px;font-size:14px;color:inherit;text-decoration:none;border-inline-start:3px solid transparent}
+.side a:hover,.side button:hover{background:var(--color-accent-100)}
+.side [aria-current="page"]{border-inline-start-color:var(--color-accent);background:var(--color-accent-100);font-weight:600}
+.step{display:flex;align-items:center;gap:8px;font-size:14px}
+.step i{width:10px;height:10px;display:block;border:1.5px solid var(--color-neutral-500);flex:none}
+.step.done i{background:var(--color-accent);border-color:var(--color-accent)}
+.step.cur i{border-color:var(--color-accent);background:var(--color-accent-200)}
+.table td,.table th{vertical-align:middle;text-align:start}
+.table td.num,.table th.num{text-align:end}
+td.mono{display:table-cell}
+[dir="rtl"] .table td.mono{text-align:right}
+[dir="ltr"] .table td.mono{text-align:left}
+.bp{position:relative;border:1px solid var(--color-divider)}
+.bp>.corner{position:absolute;width:11px;height:11px;color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+.bp>.corner::before,.bp>.corner::after{content:"";position:absolute;background:currentColor}
+.bp>.corner::before{left:5px;top:0;width:1px;height:100%}.bp>.corner::after{top:5px;left:0;width:100%;height:1px}
+.bp>.corner.tl{top:-6px;left:-6px}.bp>.corner.tr{top:-6px;right:-6px}.bp>.corner.bl{bottom:-6px;left:-6px}.bp>.corner.br{bottom:-6px;right:-6px}
+.corner{pointer-events:none}
+.intgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,400px);gap:24px;align-items:start}
+.clsgrid{display:grid;grid-template-columns:260px minmax(0,1fr);flex:1}
+.tabs{flex-wrap:wrap}.tabs button{white-space:nowrap}
+.bp[style*="repeat(5,1fr)"],.bp[style*="repeat(6,1fr)"]{grid-template-columns:repeat(auto-fit,minmax(120px,1fr)) !important}
+@container (max-width:900px){.clsgrid{grid-template-columns:minmax(0,1fr)}.clsgrid>div:first-child{border-inline-end:0;border-bottom:1px solid var(--color-divider)}.clsgrid .side{max-height:240px}}
+.intaside{position:sticky;top:72px}
+.page{container-type:inline-size}
+@container (max-width:1060px){.intgrid{grid-template-columns:minmax(0,1fr)}.intaside{position:static}}
+.gmain{container-type:inline-size}
+.inttable th,.inttable td{white-space:nowrap}.inttable td:first-child{white-space:normal}
+.nav{gap:var(--space-2) var(--space-3)}
+.nav .k{display:none}
+@media (min-width:1180px){.nav{gap:var(--space-3) var(--space-4)}.nav .k{display:inline}}
+.node{border-radius:0}.chip,.pill,.toast,.input,.seg,.btn{border-radius:0}
+:root{--c-projects:#c2612f;--c-classify:#2a8a9e;--c-delegation:#a5671c;--c-home:#2e9e6e;--c-capture:#2f7fbf;--c-approvals:#d08a1d;--c-search:#5f6fb8;--c-records:#1f8f8a;--c-disposition:#b5563a;--c-holds:#8c2f45;--c-integration:#7a4fb3;--c-admin:#5a6675;--c-myfiles:#a2497e;--c-reports:#346e8f}
+.shell{display:grid;grid-template-columns:232px minmax(0,1fr);flex:1;min-height:0}
+.gside{border-inline-end:1px solid var(--color-divider);padding:12px 0;display:flex;flex-direction:column;position:sticky;top:57px;height:calc(100vh - 57px);overflow:auto;background:var(--color-surface)}
+.gmain{min-width:0;display:flex;flex-direction:column}
+.gitem{display:flex;align-items:center;gap:10px;width:100%;text-align:start;background:none;border:0;border-inline-start:3px solid transparent;font:inherit;font-size:14px;color:inherit;cursor:pointer;padding:8px 14px 8px 11px}
+.gitem i{width:10px;height:10px;flex:none;background:var(--sec)}
+.gitem span{flex:1}.gitem .cnt{font-size:14px;padding:1px 7px;border:1px solid var(--color-divider);color:var(--color-neutral-700);font-weight:600;font-variant-numeric:tabular-nums}
+.gitem .cnt.hot{background:var(--c-approvals);border-color:var(--c-approvals);color:#fff}.gitem .cnt.err{background:var(--c-disposition);border-color:var(--c-disposition);color:#fff}
+.gitem:hover{background:color-mix(in srgb,var(--sec) 10%,transparent)}
+.gitem[aria-current="page"]{background:var(--sec);border-inline-start-color:var(--sec);color:#fff;font-weight:600}
+.gitem[aria-current="page"] i{background:#fff}
+.gitem[aria-current="page"] .cnt{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.18)}
+.gitem[aria-current="page"] .cnt.hot,.gitem[aria-current="page"] .cnt.err{background:#fff;color:var(--sec);border-color:#fff}
+.c-home{--sec:var(--c-home)}.c-projects{--sec:var(--c-projects)}.c-classify{--sec:var(--c-classify)}.c-delegation{--sec:var(--c-delegation)}.sec-projects{--sec:var(--c-projects)}.sec-classify{--sec:var(--c-classify)}.sec-delegation{--sec:var(--c-delegation)}
+.lvl{display:inline-grid;place-items:center;width:16px;height:16px;font:600 9px var(--font-heading);color:#fff;flex:none}.lvl.l1{background:#2a8a9e}.lvl.l2{background:#5fa9b8}.lvl.l3{background:#98c7d0;color:#123}
+.tag-status-ok,.tag-status-warn,.tag-status-err{display:inline-flex;align-items:center;padding:2px 8px;font-size:14px;font-weight:600;border:1px solid}.c-capture{--sec:var(--c-capture)}.c-approvals{--sec:var(--c-approvals)}.c-search{--sec:var(--c-search)}.c-records{--sec:var(--c-records)}.c-disposition{--sec:var(--c-disposition)}.c-holds{--sec:var(--c-holds)}.c-integration{--sec:var(--c-integration)}.c-admin{--sec:var(--c-admin)}
+.sec-home{--sec:var(--c-home)}.sec-capture{--sec:var(--c-capture)}.sec-approvals{--sec:var(--c-approvals)}.sec-search{--sec:var(--c-search)}.sec-records{--sec:var(--c-records)}.sec-disposition{--sec:var(--c-disposition)}.sec-holds{--sec:var(--c-holds)}.sec-integration{--sec:var(--c-integration)}.sec-admin{--sec:var(--c-admin)}.c-myfiles{--sec:var(--c-myfiles)}.sec-myfiles{--sec:var(--c-myfiles)}.c-reports{--sec:var(--c-reports)}.sec-reports{--sec:var(--c-reports)}
+.hbar{display:grid;grid-template-columns:110px minmax(0,1fr) 44px;align-items:center;gap:10px;font-size:14px}
+.hbar .trk{height:12px;background:var(--color-neutral-200);position:relative}
+.hbar .trk i{position:absolute;inset-block:0;inset-inline-start:0;background:var(--sec,var(--color-accent))}
+.hbar .trk b{position:absolute;inset-block:-3px;width:2px;background:var(--color-text)}
+[dir="rtl"] svg{direction:ltr}
+[class*="sec-"] .hd>div:first-child>.k,[class*="sec-"]>div:first-child>div:first-child>.k{color:var(--sec)}
+[class*="sec-"] .hd h3,[class*="sec-"] h3{border-inline-start:4px solid var(--sec);padding-inline-start:10px}
+[class*="sec-"] .tabs button[aria-current="page"]{border-bottom-color:var(--sec)}
+[class*="sec-"] .stat .n{color:color-mix(in srgb,var(--sec) 70%,var(--color-text))}
+.stat .n.ok,.ok{color:#2f6f3f}.stat .n.warn,.warn{color:#a8720f}.stat .n.err,.err{color:#9a4420}
+.p-open{background:#e3f3e7;border-color:#9fd1ac}.p-sens{background:#fbf0d9;border-color:#e6c680}.p-conf{background:#fbeee8;border-color:#e0b39c}.p-secr{background:#f6e4e8;border-color:#d9a3af}
+.side [aria-current="page"]{border-inline-start-color:var(--sec,var(--color-accent));background:var(--sec,var(--color-accent));color:#fff}
+.side [aria-current="page"] .tag,.side [aria-current="page"] .mono{color:#fff;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5)}
+.side a[aria-current="page"]:hover,.side button[aria-current="page"]:hover{background:var(--sec,var(--color-accent));color:#fff}
+.gitem[aria-current="page"]:hover{background:var(--sec)}
+.tabs button[aria-current="page"]:hover{background:var(--sec,var(--color-accent));color:#fff}
+.tabs button[aria-current="page"]{background:var(--sec,var(--color-accent));color:#fff;border-bottom-color:var(--sec,var(--color-accent))}
+@media (max-width:900px){.shell{grid-template-columns:56px minmax(0,1fr)}.gside .k,.gside .gitem span,.gside .cnt,.gside .gkey{display:none}.gitem{justify-content:center;padding:10px 0}}
+.table.dense td,.table.dense th{padding:6px 8px;font-size:14px}
+.rowbtn{cursor:pointer}.rowbtn:hover td{background:var(--color-accent-100)}
+.stat{padding:14px 16px;border-inline-end:1px solid var(--color-divider)}.stat:last-child{border-inline-end:0}
+.stat .n{font:600 34px/1.1 var(--font-heading)}
+.node{border:1px solid var(--color-divider);background:var(--color-surface);padding:10px 12px;min-width:160px;font-size:14px}
+.node.gate{border-color:var(--color-accent);border-width:2px}
+.node .k{display:block;margin-bottom:2px}
+.arrow{width:32px;height:2px;background:var(--color-divider);align-self:center;flex:none;position:relative}
+.arrow::after{content:"";position:absolute;inset-inline-end:-1px;top:-4px;border:5px solid transparent;border-inline-start-color:var(--color-divider)}
+.ev{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--color-divider);font-size:14px}
+.ev .t{font-family:ui-monospace,Menlo,monospace;font-size:14px;color:var(--color-neutral-600);direction:ltr}
+.tabs{display:flex;border-bottom:2px solid var(--color-divider);gap:2px}
+.tabs button{padding:10px 16px;font:inherit;font-size:14px;color:inherit;background:none;border:0;cursor:pointer;margin-bottom:-2px;border-bottom:2px solid transparent}
+.tabs button[aria-current="page"]{border-bottom-color:var(--color-accent);font-weight:600}
+.ok{color:#2f6f3f;font-weight:600}.warn{color:#8a5d10;font-weight:600}.err{color:#9a4420;font-weight:600}
+.nav{flex-wrap:wrap;gap:var(--space-3) var(--space-4)}
+.nav>*{flex:none}
+.nav .seg{flex:none}.seg-opt{white-space:nowrap}
+.nav button{background:none;border:0;font:inherit;font-size:14px;color:inherit;cursor:pointer;padding:0;white-space:nowrap}
+.nav button:hover,.nav button[aria-current="page"]{color:var(--color-accent)}
+.field.bad .input{border-color:#9a4420}
+.field .hint{font-size:14px;color:var(--color-neutral-600);margin-top:3px}
+.toast{position:fixed;bottom:20px;inset-inline-start:20px;background:var(--color-accent-900);color:#fff;padding:12px 16px;font-size:14px;box-shadow:var(--shadow-lg);z-index:50;max-width:420px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:3px 8px;background:var(--color-accent-100);color:var(--color-accent-900);border:1px solid var(--color-accent-300)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;align-content:start}
+.page{padding:22px 28px;display:flex;flex-direction:column;gap:16px}
+.hd{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.hd .sp{margin-inline-start:auto;display:flex;gap:8px;align-items:center}
+.prev{background:#fff;border:1px solid var(--color-divider);padding:20px;color:var(--color-neutral-500);font-size:14px;display:flex;flex-direction:column;gap:8px}
+.prev b{display:block;height:8px;background:var(--color-neutral-200)}
+.dot-ok,.dot-warn,.dot-err{display:inline-block;width:9px;height:9px;margin-inline-end:6px;vertical-align:middle}
+.dot-ok{background:#2f6f3f}.dot-warn{background:#c8921d}.dot-err{background:#9a4420}
+.acct-i{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid currentColor;font:600 9px var(--font-heading);flex:none}
+.mfgrid{display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px;align-items:start}
+@container (max-width:860px){.mfgrid{grid-template-columns:minmax(0,1fr)}}
+[data-density="compact"] .table td,[data-density="compact"] .table th{padding:5px 7px;font-size:12.5px}
+[data-density="compact"] .page{padding:14px 20px;gap:12px}
+[data-density="compact"] .stat .n{font-size:26px}
+.bfgrid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;align-items:start}
+@container (max-width:1020px){.bfgrid{grid-template-columns:minmax(0,1fr)}.bfgrid aside{position:static}}
+.introjs-tooltip{border-radius:0;border:1px solid var(--color-divider);box-shadow:var(--shadow-lg);font-family:var(--font-body);overflow:visible;min-width:330px;max-width:400px;background:#fff}
+.introjs-tooltiptext{font-size:14px;line-height:1.55;padding:16px 20px 8px}
+.introjs-helperLayer{border-radius:0}
+body:has([data-theme="green"]) .introjs-tooltip{--color-accent:#2e9e6e;--color-accent-100:#eef8f2;--color-accent-600:#2b8f66;--color-accent-700:#1f6f4f}
+.dgchar{position:absolute;bottom:-6px;width:118px;pointer-events:none;filter:drop-shadow(2px 6px 8px rgba(0,0,0,.28))}
+.dgk{display:flex;justify-content:space-between;align-items:baseline;font:600 10px var(--font-heading);letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700)}
+.dgk .dgn{letter-spacing:.02em;color:var(--color-neutral-600);font-variant-numeric:tabular-nums}
+.dgt{font:600 21px/1.15 var(--font-heading);margin:7px 0 8px;color:var(--color-text)}
+.dgq{font-size:13.5px;line-height:1.62;color:var(--color-text)}
+.dgby{margin-top:9px;font-size:14px;color:var(--color-neutral-600)}
+.introjs-tooltipbuttons{border-top:1px solid var(--color-divider);padding:10px 20px}
+@media (max-width:760px){.dgchar{display:none}}
+.introjs-button{border-radius:0;text-shadow:none;font:inherit;font-size:14px;padding:6px 14px;border:1px solid var(--color-divider);background:#fff;color:var(--color-text)}
+.introjs-button:hover,.introjs-button:focus{background:var(--color-accent-100);border-color:var(--color-divider);color:var(--color-text);box-shadow:none}
+.introjs-nextbutton,.introjs-nextbutton:hover,.introjs-nextbutton:focus{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+.introjs-progress{border-radius:0;background:var(--color-neutral-200)}
+.introjs-progressbar{border-radius:0;background:var(--color-accent)}
+[dir="rtl"] .introjs-tooltip{font-family:"Roboto",var(--font-body);text-align:right;direction:rtl}
+</style><link rel="stylesheet" href="../alternative.css?v=customer-comments-20261028-r2"><link rel="stylesheet" href="../operations.css?v=customer-comments-20261028-r2"></head><body>
+
+
+<div data-theme="green" data-density="default" data-mode="light" data-radius="round" data-side="expanded" data-header="fixed" data-width="fluid" data-font="plex" data-fs="m" data-motion="on" data-contrast="off" data-links="off" data-targets="off" dir="rtl" lang="ar" style="min-height:100vh;background:var(--color-bg);color:var(--color-text);display:flex;flex-direction:column">
+
+
+
+<div class="nav" style="position:sticky;top:0;background:var(--color-bg);z-index:10;border-bottom:1px solid var(--color-divider)">
+<div style="display:flex;align-items:center;gap:12px;margin-inline-end:auto;flex:none"><img src="../uploads/adpf-logo.png" alt="Abu Dhabi Pension Fund" style="height:40px;width:auto"><span style="width:1px;height:28px;background:var(--color-divider)"></span><div style="display:flex;flex-direction:column;line-height:1.1;justify-content:center">
+<span class="nav-brand" style="margin:0;font-size:26px;line-height:1">DAS</span>
+<span style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-800);font-weight:600;white-space:nowrap;font-family:var(--font-heading)">نظام أرشفة الوثائق</span>
+</div></div>
+
+<button data-action="startTour" style="font-weight:600">? دليل الاستخدام</button>
+<span class="seg" style="margin-inline-start:8px" data-tour="lang"><label class="seg-opt"><input type="radio" name="lang" value="en" data-action="setLang"><span>English</span></label><label class="seg-opt"><input type="radio" name="lang" value="ar" checked data-action="setLang"><span>العربية</span></label></span>
+<div class="account-navigation">
+<button class="account-search" data-action="nav.search" aria-label="البحث"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+<details class="account-menu"><summary aria-label="قائمة الحساب"><span class="account-avatar">AA</span><span class="account-summary"><strong>عبير أ. · إدارة تقنية المعلومات</strong><small>مساحة عمل صندوق أبوظبي للتقاعد</small></span><span class="material-symbols-rounded account-chevron" aria-hidden="true">expand_more</span></summary>
+<div class="account-popover"><div class="account-identity"><span class="account-avatar">AA</span><div><strong>عبير أ. · إدارة تقنية المعلومات</strong><small>مساحة عمل صندوق أبوظبي للتقاعد</small></div></div>
+<div class="appearance-switch" role="group" aria-label="المظهر"><button type="button" data-appearance-choice="system" aria-pressed="false"><span class="material-symbols-rounded" aria-hidden="true">desktop_windows</span>النظام</button><button type="button" data-appearance-choice="light" aria-pressed="true"><span class="material-symbols-rounded" aria-hidden="true">light_mode</span>فاتح</button><button type="button" data-appearance-choice="dark" aria-pressed="false"><span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>داكن</button></div>
+<div class="account-actions"><a class="account-settings" href="ar-settings.html"><span class="material-symbols-rounded" aria-hidden="true">tune</span>إعداداتي</a><button type="button" data-action="signOut"><span class="material-symbols-rounded" aria-hidden="true">logout</span>تسجيل الخروج</button></div></div></details></div>
+</div>
+
+
+<div class="shell">
+<nav class="gside" aria-label="Main">
+<div class="k" style="padding:6px 14px 4px">أعمالي</div>
+<button class="gitem c-home" data-action="nav.home" aria-current="page"><span class="material-symbols-rounded" aria-hidden="true">home</span><span>الرئيسية</span></button>
+<button class="gitem c-capture" data-tour="nav-capture" data-action="nav.capture" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">upload</span><span>الالتقاط</span><b class="cnt">3</b></button>
+<button class="gitem c-myfiles" data-tour="nav-myfiles" data-action="nav.myfiles" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">folder</span><span>ملفاتي</span><b class="cnt">2</b></button>
+<button class="gitem c-approvals" data-tour="nav-approvals" data-action="nav.approvals" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">checklist</span><span>الاعتمادات</span><b class="cnt hot">7</b></button>
+<button class="gitem c-delegation" data-action="nav.delegation" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">group</span><span>التفويض</span><b class="cnt">3</b></button>
+<div class="k" style="padding:14px 14px 4px">الوثائق</div>
+<button class="gitem c-search" data-tour="nav-search" data-action="nav.search" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>البحث</span></button>
+<button class="gitem c-search" data-action="navLib.policies" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>السياسات والتفويضات</span></button>
+<button class="gitem c-search" data-action="navLib.contracts" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>العقود واتفاقيات الخدمة</span></button>
+<button class="gitem c-search" data-action="navLib.corr" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">search</span><span>المراسلات</span></button>
+<div class="k" style="padding:14px 14px 4px">الأرشيف</div>
+<button class="gitem c-projects" data-action="nav.projects" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">work</span><span>المشاريع</span><b class="cnt">3</b></button>
+<button class="gitem c-records" data-action="nav.records" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">inventory_2</span><span>السجلات</span></button>
+<button class="gitem c-classify" data-action="nav.classify" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">sell</span><span>التصنيف</span><b class="cnt hot">3</b></button>
+<button class="gitem c-disposition" data-action="nav.disposition" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">delete</span><span>التصرف النهائي</span><b class="cnt">4</b></button>
+<button class="gitem c-holds" data-action="nav.holds" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">verified_user</span><span>الحجز القانوني</span></button>
+<div class="k" style="padding:14px 14px 4px">المنصة</div>
+<button class="gitem c-reports" data-action="nav.reports" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">monitoring</span><span>التقارير</span></button>
+<button class="gitem c-integration" data-action="nav.integration" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">hub</span><span>التكامل</span><b class="cnt err">3</b></button>
+<button class="gitem c-admin" data-action="nav.admin" aria-current=""><span class="material-symbols-rounded" aria-hidden="true">settings</span><span>الإدارة</span></button>
+</nav>
+<div class="gmain"><div class="ops-workspace" dir="rtl"><div class="ops-demo-strip"><span><span class="material-symbols-rounded" aria-hidden="true">science</span>نموذج تفاعلي للعميل · بيانات توضيحية</span><span>التاريخ التجريبي: 28 أكتوبر 2026</span><a href="../IMPLEMENTATION-SCOPE.html">الإمكانات ونطاق التنفيذ</a></div><header class="ops-heading"><div><div class="ops-eyebrow">صندوق أبوظبي للتقاعد · عمليات الأرشيف</div><h1>أولوياتك في مكان واحد</h1><p>رؤية واضحة لما يتطلب انتباهك والخطوة التالية.</p></div><div class="ops-heading-actions"><span class="ops-role"><span class="material-symbols-rounded" aria-hidden="true">badge</span>مسؤول الأرشيف</span><a class="btn btn-primary" href="ar-capture-upload.html"><span class="material-symbols-rounded" aria-hidden="true">upload</span>رفع الوثائق</a><a class="btn btn-secondary" data-ops-view="reports" data-ops-filters="{}" href="ar-reports.html">نظرة الإدارة<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a></div></header><section class="ops-section"><div class="ops-section-heading"><div><h2>يتطلب الانتباه</h2><p>ابدأ هنا: المهام العاجلة والسجلات المتوقفة أولاً.</p></div><a class="ops-inline-link" data-ops-view="records" data-ops-filters="{&quot;scope&quot;:&quot;attention&quot;}" href="ar-attention.html?scope=attention">جميع العناصر التي تتطلب الانتباه<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a></div><div class="ops-attention-grid"><a class="ops-attention is-urgent" data-ops-view="approvals" data-ops-filters="{&quot;scope&quot;:&quot;overdue&quot;}" href="ar-overdue-tasks.html?scope=overdue"><span class="material-symbols-rounded" aria-hidden="true">schedule</span><strong>2</strong><div><h3>متأخر / تجاوز مستوى الخدمة</h3><p>مراجعة المهام العاجلة</p></div><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a><a class="ops-attention " data-ops-view="classify" data-ops-filters="{&quot;scope&quot;:&quot;low_confidence&quot;}" href="ar-classification-review.html?scope=low_confidence"><span class="material-symbols-rounded" aria-hidden="true">rule</span><strong>1</strong><div><h3>تصنيف منخفض الثقة</h3><p>تأكيد البيانات أو تصحيحها</p></div><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a><a class="ops-attention " data-ops-view="approvals" data-ops-filters="{&quot;scope&quot;:&quot;pending&quot;}" href="ar-approvals.html?scope=pending"><span class="material-symbols-rounded" aria-hidden="true">checklist</span><strong>7</strong><div><h3>إجراءات سير عمل معلقة</h3><p>فتح قائمة الإجراءات</p></div><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a><a class="ops-attention " data-ops-view="records" data-ops-filters="{&quot;scope&quot;:&quot;exceptions&quot;}" href="ar-retention-exceptions.html?scope=exceptions"><span class="material-symbols-rounded" aria-hidden="true">report_problem</span><strong>3</strong><div><h3>استثناءات الاحتفاظ</h3><p>حلها قبل المتابعة</p></div><span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a></div></section><div class="ops-kpis"><a data-ops-page="true" class="ops-kpi" data-ops-view="approvals" data-ops-filters="{&quot;scope&quot;:&quot;pending&quot;}" href="ar-approvals.html?scope=pending"><span class="ops-kpi-label">المهام المعلقة</span><span class="material-symbols-rounded" aria-hidden="true">checklist</span><strong>7</strong><span class="ops-kpi-foot">المراجعة واتخاذ إجراء<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a><a data-ops-page="true" class="ops-kpi" data-ops-view="capture" data-ops-filters="{&quot;scope&quot;:&quot;dropoff&quot;}" href="ar-capture.html?scope=dropoff"><span class="ops-kpi-label">دفعات الاستلام</span><span class="material-symbols-rounded" aria-hidden="true">upload</span><strong>3</strong><span class="ops-kpi-foot">1 بحاجة لمراجعة التصنيف<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a><a data-ops-page="true" class="ops-kpi" data-ops-view="records" data-ops-filters="{&quot;scope&quot;:&quot;recent&quot;}" href="ar-recently-archived.html?scope=recent"><span class="ops-kpi-label">المؤرشف حديثاً · ٣٠ يوماً</span><span class="material-symbols-rounded" aria-hidden="true">inventory_2</span><strong>412</strong><span class="ops-kpi-foot">استعراض السجلات المكتملة<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a><a data-ops-page="true" class="ops-kpi" data-ops-view="records" data-ops-filters="{&quot;scope&quot;:&quot;retention&quot;}" href="ar-retention-gates.html?scope=retention"><span class="ops-kpi-label">بوابات الاحتفاظ · ٩٠ يوماً</span><span class="material-symbols-rounded" aria-hidden="true">event_available</span><strong>58</strong><span class="ops-kpi-foot">51 مراجعة · 7 تحويل<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a></div><section class="ops-section"><div class="ops-section-heading"><div><h2>المهام المعلقة</h2><p>الإجراء والأولوية والعمر وحالة سير العمل قبل فتح السجل.</p></div><a class="ops-inline-link" data-ops-view="approvals" data-ops-filters="{&quot;scope&quot;:&quot;pending&quot;}" href="ar-approvals.html?scope=pending">جميع المهام<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a></div><div class="table-scroll"><table class="ops-table"><thead><tr><th scope="col">الإجراء المطلوب / السجل</th><th scope="col">الأولوية</th><th scope="col">العمر / مستوى الخدمة</th><th scope="col">حالة سير العمل</th><th scope="col">الخطوة التالية</th></tr></thead><tbody><tr><td data-label="الإجراء المطلوب / السجل"><strong>المراجعة والاعتماد</strong><button class="ops-record-link" data-ops="record" data-id="DAS-260534">تقرير · عقود المشتريات · 534</button><small>DAS-260534 · المالية</small></td><td data-label="الأولوية"><span class="ops-badge warn">عالية</span></td><td data-label="العمر / مستوى الخدمة"><span>2 أيام</span><span class="ops-badge urgent">متأخر 43 س</span></td><td data-label="حالة سير العمل"><span class="ops-badge ">بانتظار الاعتماد</span></td><td data-label="الخطوة التالية"><button class="btn btn-secondary" data-ops="task" data-id="DAS-260534">فتح المهمة</button></td></tr><tr><td data-label="الإجراء المطلوب / السجل"><strong>التحقق من البيانات</strong><button class="ops-record-link" data-ops="record" data-id="DAS-260533">مراسلة · خدمات الموظفين · 533</button><small>DAS-260533 · تقنية المعلومات</small></td><td data-label="الأولوية"><span class="ops-badge warn">عالية</span></td><td data-label="العمر / مستوى الخدمة"><span>1 أيام</span><span class="ops-badge urgent">متأخر 19 س</span></td><td data-label="حالة سير العمل"><span class="ops-badge ">مراجعة البيانات</span></td><td data-label="الخطوة التالية"><button class="btn btn-secondary" data-ops="task" data-id="DAS-260533">فتح المهمة</button></td></tr><tr><td data-label="الإجراء المطلوب / السجل"><strong>التحقق من البيانات</strong><button class="ops-record-link" data-ops="record" data-id="DAS-260535">قرار · المراسلات الإدارية · 535</button><small>DAS-260535 · الموارد البشرية</small></td><td data-label="الأولوية"><span class="ops-badge ">متوسطة</span></td><td data-label="العمر / مستوى الخدمة"><span>3 أيام</span><span class="ops-badge ">يستحق خلال 29 س</span></td><td data-label="حالة سير العمل"><span class="ops-badge ">مراجعة البيانات</span></td><td data-label="الخطوة التالية"><button class="btn btn-secondary" data-ops="task" data-id="DAS-260535">فتح المهمة</button></td></tr><tr><td data-label="الإجراء المطلوب / السجل"><strong>المراجعة والاعتماد</strong><button class="ops-record-link" data-ops="record" data-id="DAS-260536">سياسة · أمن المعلومات · 536</button><small>DAS-260536 · المشتريات</small></td><td data-label="الأولوية"><span class="ops-badge ">متوسطة</span></td><td data-label="العمر / مستوى الخدمة"><span>4 أيام</span><span class="ops-badge ">يستحق خلال 53 س</span></td><td data-label="حالة سير العمل"><span class="ops-badge ">بانتظار الاعتماد</span></td><td data-label="الخطوة التالية"><button class="btn btn-secondary" data-ops="task" data-id="DAS-260536">فتح المهمة</button></td></tr><tr><td data-label="الإجراء المطلوب / السجل"><strong>التحقق من البيانات</strong><button class="ops-record-link" data-ops="record" data-id="DAS-260537">عقد · التقارير المالية · 537</button><small>DAS-260537 · الخدمات المساندة</small></td><td data-label="الأولوية"><span class="ops-badge ">متوسطة</span></td><td data-label="العمر / مستوى الخدمة"><span>5 أيام</span><span class="ops-badge ">يستحق خلال 77 س</span></td><td data-label="حالة سير العمل"><span class="ops-badge ">مراجعة البيانات</span></td><td data-label="الخطوة التالية"><button class="btn btn-secondary" data-ops="task" data-id="DAS-260537">فتح المهمة</button></td></tr></tbody></table></div></section><section class="ops-section"><div class="ops-section-heading"><div><h2>الاحتفاظ وإجراءات دورة الحياة</h2><p>المراجعة والتحويل والحجز والإتلاف المعتمد قوائم مستقلة.</p></div></div><div class="ops-lifecycle-grid"><a class="ops-lifecycle" data-ops-view="records" data-ops-filters="{&quot;lifecycle&quot;:&quot;review_due&quot;}" href="ar-retention-review.html?lifecycle=review_due"><span class="ops-icon-tile"><span class="material-symbols-rounded" aria-hidden="true">event_repeat</span></span><strong>51</strong><h3>مراجعة الاحتفاظ مستحقة</h3><p>مراجعة الأهلية وقواعد الاحتفاظ</p><span class="ops-inline-link">عرض السجلات<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a><a class="ops-lifecycle" data-ops-view="records" data-ops-filters="{&quot;lifecycle&quot;:&quot;transfer_due&quot;}" href="ar-transfer-archives.html?lifecycle=transfer_due"><span class="ops-icon-tile"><span class="material-symbols-rounded" aria-hidden="true">drive_file_move</span></span><strong>7</strong><h3>التحويل إلى الأرشيف</h3><p>إعداد حزمة التحويل إلى الأرشيف</p><span class="ops-inline-link">عرض السجلات<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a><a class="ops-lifecycle" data-ops-view="holds" data-ops-filters="{&quot;lifecycle&quot;:&quot;legal_hold&quot;}" href="ar-legal-holds.html?lifecycle=legal_hold"><span class="ops-icon-tile"><span class="material-symbols-rounded" aria-hidden="true">lock</span></span><strong>5</strong><h3>حجز قانوني</h3><p>الحفظ سارٍ · الإتلاف محظور</p><span class="ops-inline-link">عرض السجلات<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a><a class="ops-lifecycle" data-ops-view="records" data-ops-filters="{&quot;lifecycle&quot;:&quot;authorized_disposition&quot;}" href="ar-authorized-disposition.html?lifecycle=authorized_disposition"><span class="ops-icon-tile"><span class="material-symbols-rounded" aria-hidden="true">verified</span></span><strong>4</strong><h3>إتلاف معتمد</h3><p>فحص الاعتماد قبل التنفيذ</p><span class="ops-inline-link">عرض السجلات<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></span></a></div></section><section class="ops-section"><div class="ops-section-heading"><div><h2>التصنيف وجودة السجلات</h2><p>يمكن لمسؤول الأرشيف تأكيد التصنيف المقترح أو تصحيحه وتحديث البيانات.</p></div></div><div class="ops-quality-card"><span class="ops-icon-tile"><span class="material-symbols-rounded" aria-hidden="true">fact_check</span></span><div><h3>3 سجلات تحتاج للتحقق من الجودة</h3><p>1 ثقة منخفضة · 2 بيانات ناقصة</p></div><a class="btn btn-primary" data-ops-view="classify" data-ops-filters="{&quot;scope&quot;:&quot;quality&quot;}" href="ar-classification-review.html?scope=quality">مراجعة التصنيف<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a></div></section><section class="ops-section"><div class="ops-section-heading"><div><h2>الأنشطة المكتملة حديثاً</h2><p>سجل قابل للتدقيق لما أنجزه الفريق.</p></div><a class="ops-inline-link" data-ops-view="records" data-ops-filters="{&quot;scope&quot;:&quot;recent&quot;}" href="ar-recently-archived.html?scope=recent">جميع السجلات المؤرشفة<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a></div><div class="table-scroll"><table class="ops-table"><thead><tr><th scope="col">السجل</th><th scope="col">الإدارة / الموظف</th><th scope="col">الإكمال</th><th scope="col">النتيجة</th></tr></thead><tbody><tr><td data-label="السجل"><button class="ops-record-link" data-ops="record" data-id="DAS-260001">سياسة · أمن المعلومات · 1</button><small>DAS-260001</small></td><td data-label="الإدارة / الموظف">تقنية المعلومات<small>Abeer Ahmed</small></td><td data-label="الإكمال">28 أكتوبر 2026</td><td data-label="النتيجة"><span class="ops-badge success">مؤرشف</span></td></tr><tr><td data-label="السجل"><button class="ops-record-link" data-ops="record" data-id="DAS-260031">سياسة · أمن المعلومات · 31</button><small>DAS-260031</small></td><td data-label="الإدارة / الموظف">الموارد البشرية<small>Abeer Ahmed</small></td><td data-label="الإكمال">28 أكتوبر 2026</td><td data-label="النتيجة"><span class="ops-badge success">مؤرشف</span></td></tr><tr><td data-label="السجل"><button class="ops-record-link" data-ops="record" data-id="DAS-260061">سياسة · أمن المعلومات · 61</button><small>DAS-260061</small></td><td data-label="الإدارة / الموظف">الخدمات المساندة<small>Abeer Ahmed</small></td><td data-label="الإكمال">28 أكتوبر 2026</td><td data-label="النتيجة"><span class="ops-badge success">مؤرشف</span></td></tr><tr><td data-label="السجل"><button class="ops-record-link" data-ops="record" data-id="DAS-260091">سياسة · أمن المعلومات · 91</button><small>DAS-260091</small></td><td data-label="الإدارة / الموظف">الاستثمارات<small>Abeer Ahmed</small></td><td data-label="الإكمال">28 أكتوبر 2026</td><td data-label="النتيجة"><span class="ops-badge success">مؤرشف</span></td></tr><tr><td data-label="السجل"><button class="ops-record-link" data-ops="record" data-id="DAS-260121">سياسة · أمن المعلومات · 121</button><small>DAS-260121</small></td><td data-label="الإدارة / الموظف">المالية<small>Abeer Ahmed</small></td><td data-label="الإكمال">28 أكتوبر 2026</td><td data-label="النتيجة"><span class="ops-badge success">مؤرشف</span></td></tr></tbody></table></div></section></div></div></div>
+
+
+
+
+</div><script src="../operations-core.js?v=customer-comments-20261028-r2"></script><script src="../package-state.js?v=customer-comments-20261028-r2"></script><script src="../operations-ui.js?v=customer-comments-20261028-r2"></script><script src="../review-navigation.js?v=customer-comments-20261028-r2"></script><script src="../responsive-ui.js?v=customer-comments-20261028-r2"></script></body></html>
