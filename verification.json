@@ -1,0 +1,22 @@
+{
+  "review_pages": 104,
+  "languages": [
+    "English",
+    "Arabic"
+  ],
+  "view_model_routes": 18,
+  "operational_views": 48,
+  "restored_workflow_entries": 56,
+  "synthetic_records": 632,
+  "reporting_periods": 7,
+  "report_types": 7,
+  "screen_destinations": 52,
+  "customer_requirements_map": "acceptance-matrix.json",
+  "restored_verification": "DOM execution of actual File intake, editable original indexing form, required metadata, submission to pending work, draft resume, Excel/CSV/JSON import; supporting route mounts including Arabic; original workflow model actions",
+  "operational_verification": "KPI reconciliation; compound filters; all period/department/user drill-downs; classification and task updates; retention exception and legal hold guards; bilingual source rendering",
+  "header_variants": 1,
+  "broken_local_resources": 0,
+  "unresolved_template_expressions": 0,
+  "visual_browser_verification": "Not completed; source/render-model checks do not verify browser layout",
+  "brand_validation": "Supplied palette retained; requested Roboto and Noto Kufi Arabic fonts bundled offline"
+}

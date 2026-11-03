@@ -1,0 +1,262 @@
+[
+  {
+    "id": "home",
+    "title": "Dashboard",
+    "file": "screens/home.html"
+  },
+  {
+    "id": "capture",
+    "title": "Capture & drop-off",
+    "file": "screens/capture.html"
+  },
+  {
+    "id": "myfiles",
+    "title": "My files",
+    "file": "screens/myfiles.html"
+  },
+  {
+    "id": "approvals",
+    "title": "Approvals",
+    "file": "screens/approvals.html"
+  },
+  {
+    "id": "task",
+    "title": "Approval detail",
+    "file": "screens/task.html"
+  },
+  {
+    "id": "delegation",
+    "title": "Delegation",
+    "file": "screens/delegation.html"
+  },
+  {
+    "id": "search",
+    "title": "Search archive",
+    "file": "screens/search.html"
+  },
+  {
+    "id": "document",
+    "title": "Document detail",
+    "file": "screens/document.html"
+  },
+  {
+    "id": "share",
+    "title": "Share document",
+    "file": "screens/share.html"
+  },
+  {
+    "id": "policies",
+    "title": "Policies",
+    "file": "screens/policies.html"
+  },
+  {
+    "id": "contracts",
+    "title": "Contracts",
+    "file": "screens/contracts.html"
+  },
+  {
+    "id": "corr",
+    "title": "Correspondence",
+    "file": "screens/corr.html"
+  },
+  {
+    "id": "records",
+    "title": "Records & retention",
+    "file": "screens/records.html"
+  },
+  {
+    "id": "projects",
+    "title": "Projects",
+    "file": "screens/projects.html"
+  },
+  {
+    "id": "classify",
+    "title": "Classification",
+    "file": "screens/classify.html"
+  },
+  {
+    "id": "disposition",
+    "title": "Disposition",
+    "file": "screens/disposition.html"
+  },
+  {
+    "id": "holds",
+    "title": "Legal holds",
+    "file": "screens/holds.html"
+  },
+  {
+    "id": "reports",
+    "title": "Reports & insights",
+    "file": "screens/reports.html"
+  },
+  {
+    "id": "integration",
+    "title": "Integrations",
+    "file": "screens/integration.html"
+  },
+  {
+    "id": "admin",
+    "title": "Administration",
+    "file": "screens/admin.html"
+  },
+  {
+    "id": "settings",
+    "title": "My settings",
+    "file": "screens/settings.html"
+  },
+  {
+    "id": "capture-upload",
+    "title": "Upload documents",
+    "file": "screens/capture-upload.html"
+  },
+  {
+    "id": "capture-scan",
+    "title": "Scan / scanned pages",
+    "file": "screens/capture-scan.html"
+  },
+  {
+    "id": "capture-import",
+    "title": "Metadata import",
+    "file": "screens/capture-import.html"
+  },
+  {
+    "id": "capture-batch",
+    "title": "Batch indexing",
+    "file": "screens/capture-batch.html"
+  },
+  {
+    "id": "capture-index",
+    "title": "Single-document indexing",
+    "file": "screens/capture-index.html"
+  },
+  {
+    "id": "capture-confirmation",
+    "title": "Capture confirmation",
+    "file": "screens/capture-confirmation.html"
+  },
+  {
+    "id": "capture-drafts",
+    "title": "Capture drafts",
+    "file": "screens/capture-drafts.html"
+  },
+  {
+    "id": "project-detail",
+    "title": "Project workspace",
+    "file": "screens/project-detail.html"
+  },
+  {
+    "id": "integration-setup",
+    "title": "Integration setup",
+    "file": "screens/integration-setup.html"
+  },
+  {
+    "id": "workflow-editor",
+    "title": "Workflow editor",
+    "file": "screens/workflow-editor.html"
+  },
+  {
+    "id": "activity",
+    "title": "Activity & audit",
+    "file": "screens/activity.html"
+  },
+  {
+    "id": "signin",
+    "title": "Sign in",
+    "file": "screens/signin.html"
+  },
+  {
+    "id": "help",
+    "title": "Help & guided journeys",
+    "file": "screens/help.html"
+  },
+  {
+    "id": "workflow-inbox",
+    "title": "Workflow inbox & decisions",
+    "file": "screens/workflow-inbox.html"
+  },
+  {
+    "id": "attention",
+    "title": "Items requiring attention",
+    "file": "screens/attention.html"
+  },
+  {
+    "id": "overdue-tasks",
+    "title": "Overdue tasks & SLA breaches",
+    "file": "screens/overdue-tasks.html"
+  },
+  {
+    "id": "retention-exceptions",
+    "title": "Retention exceptions",
+    "file": "screens/retention-exceptions.html"
+  },
+  {
+    "id": "retention-gates",
+    "title": "Retention gates",
+    "file": "screens/retention-gates.html"
+  },
+  {
+    "id": "retention-review",
+    "title": "Retention review due",
+    "file": "screens/retention-review.html"
+  },
+  {
+    "id": "transfer-archives",
+    "title": "Transfer to archives",
+    "file": "screens/transfer-archives.html"
+  },
+  {
+    "id": "legal-holds",
+    "title": "Legal hold register",
+    "file": "screens/legal-holds.html"
+  },
+  {
+    "id": "authorized-disposition",
+    "title": "Authorized disposition review",
+    "file": "screens/authorized-disposition.html"
+  },
+  {
+    "id": "classification-review",
+    "title": "Classification & metadata review",
+    "file": "screens/classification-review.html"
+  },
+  {
+    "id": "recently-archived",
+    "title": "Recently archived records",
+    "file": "screens/recently-archived.html"
+  },
+  {
+    "id": "department-performance",
+    "title": "Department performance & delays",
+    "file": "screens/department-performance.html"
+  },
+  {
+    "id": "user-activity",
+    "title": "Individual user activity",
+    "file": "screens/user-activity.html"
+  },
+  {
+    "id": "periodic-reports",
+    "title": "Periodic management reports",
+    "file": "screens/periodic-reports.html"
+  },
+  {
+    "id": "classification-scheme",
+    "title": "Classification scheme & rules",
+    "file": "screens/classification-scheme.html"
+  },
+  {
+    "id": "retention-register",
+    "title": "Retention register & schedules",
+    "file": "screens/retention-register.html"
+  },
+  {
+    "id": "hold-management",
+    "title": "Legal hold management",
+    "file": "screens/hold-management.html"
+  },
+  {
+    "id": "disposition-committee",
+    "title": "Disposition committee & approvals",
+    "file": "screens/disposition-committee.html"
+  }
+]

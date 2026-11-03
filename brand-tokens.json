@@ -1,0 +1,42 @@
+{
+  "source": "RGB values sampled from the supplied palette screenshot; original numeric brand specifications were not included.",
+  "primary": [
+    "#269d6a",
+    "#003234",
+    "#00453f",
+    "#005f4f",
+    "#7ea393",
+    "#b2b09d",
+    "#ccc9b4",
+    "#e5e2cb",
+    "#f4f4ee"
+  ],
+  "secondary": [
+    "#682a0a",
+    "#943c0e",
+    "#e56c29",
+    "#f4935e",
+    "#63420f",
+    "#976f30",
+    "#ce9842",
+    "#f3bf6d",
+    "#3f4146",
+    "#63666e",
+    "#a7a9b3",
+    "#d9dae3",
+    "#d12101"
+  ],
+  "headline_font": "Roboto (English), Noto Kufi Arabic (Arabic)",
+  "body_font": "Roboto (English), Noto Kufi Arabic (Arabic)",
+  "system_fallback": "Segoe UI",
+  "icons": {
+    "family": "Google Material Symbols Rounded",
+    "weight": 200,
+    "fill": 0,
+    "grade": 0,
+    "optical_size": 24
+  },
+  "red_usage": "Negative chart results only",
+  "font_status": "All four weights of each family bundled offline",
+  "header": "Fixed dark jade, no selector"
+}

@@ -1,0 +1,3 @@
+(()=>{const key='adpf.complete-package.v3';function load(){try{if(window.name.startsWith('ADPF_PACKAGE_V3:'))return JSON.parse(window.name.slice(16));const cached=localStorage.getItem(key);if(cached)return JSON.parse(cached);if(window.name.startsWith('ADPF_OPS_V2:'))return {operations:JSON.parse(window.name.slice(12))}}catch{}return {operations:{},legacy:null}}
+function save(part,value){const packet=load();packet[part]=value;const text=JSON.stringify(packet);try{localStorage.setItem(key,text)}catch{}try{window.name='ADPF_PACKAGE_V3:'+text}catch{}return packet}
+window.ArchivePackage={load,save};})();

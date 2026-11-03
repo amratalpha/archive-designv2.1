@@ -1,0 +1,101 @@
+{
+  "version": "customer-comments-20261028-r2",
+  "scope": "Local interactive design prototype; production integrations described separately",
+  "requirements": [
+    {
+      "requirement": "needs-attention",
+      "status": "implemented-in-prototype",
+      "screen": "screens/attention.html",
+      "arabic": "screens/ar-attention.html"
+    },
+    {
+      "requirement": "actionable-kpis",
+      "status": "implemented-in-prototype",
+      "screen": "screens/home.html",
+      "arabic": "screens/ar-home.html"
+    },
+    {
+      "requirement": "task-visibility",
+      "status": "implemented-in-prototype",
+      "screen": "screens/approvals.html",
+      "arabic": "screens/ar-approvals.html"
+    },
+    {
+      "requirement": "retention-review",
+      "status": "implemented-in-prototype",
+      "screen": "screens/retention-review.html",
+      "arabic": "screens/ar-retention-review.html"
+    },
+    {
+      "requirement": "transfer",
+      "status": "implemented-in-prototype",
+      "screen": "screens/transfer-archives.html",
+      "arabic": "screens/ar-transfer-archives.html"
+    },
+    {
+      "requirement": "legal-hold",
+      "status": "implemented-in-prototype",
+      "screen": "screens/legal-holds.html",
+      "arabic": "screens/ar-legal-holds.html"
+    },
+    {
+      "requirement": "authorized-disposition",
+      "status": "implemented-in-prototype",
+      "screen": "screens/authorized-disposition.html",
+      "arabic": "screens/ar-authorized-disposition.html"
+    },
+    {
+      "requirement": "classification-review",
+      "status": "implemented-in-prototype",
+      "screen": "screens/classification-review.html",
+      "arabic": "screens/ar-classification-review.html"
+    },
+    {
+      "requirement": "search-filters",
+      "status": "implemented-in-prototype",
+      "screen": "screens/search.html",
+      "arabic": "screens/ar-search.html"
+    },
+    {
+      "requirement": "department-kpis",
+      "status": "implemented-in-prototype",
+      "screen": "screens/department-performance.html",
+      "arabic": "screens/ar-department-performance.html"
+    },
+    {
+      "requirement": "periodic-reporting",
+      "status": "implemented-in-prototype",
+      "screen": "screens/periodic-reports.html",
+      "arabic": "screens/ar-periodic-reports.html"
+    },
+    {
+      "requirement": "individual-activity",
+      "status": "implemented-in-prototype",
+      "screen": "screens/user-activity.html",
+      "arabic": "screens/ar-user-activity.html"
+    },
+    {
+      "requirement": "capture-preservation",
+      "status": "implemented-in-prototype",
+      "screen": "screens/capture.html",
+      "arabic": "screens/ar-capture.html"
+    }
+  ],
+  "officerHierarchy": [
+    "Needs attention",
+    "Pending tasks",
+    "Retention / lifecycle",
+    "Classification / record quality",
+    "Recently completed"
+  ],
+  "reportingPeriods": [
+    "daily",
+    "weekly",
+    "monthly",
+    "quarterly",
+    "semiannual",
+    "annual",
+    "custom"
+  ],
+  "capturePreserved": true
+}
